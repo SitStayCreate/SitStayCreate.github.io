@@ -1,197 +1,198 @@
 
 <!-- saved from url=(0055)http://localhost:8080/ssc_website/documentation/midiosc -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Midiosc</title>
-    
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Midiosc</title>
+        
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script type="text/javascript" async="" src="./Midiosc_files/analytics.js.download"></script><script async="" src="./Midiosc_files/js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script type="text/javascript" async="" src="./Midiosc_files/analytics.js.download"></script><script async="" src="./Midiosc_files/js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-194353784-1');
-    </script>
+            gtag('config', 'UA-194353784-1');
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
 
+        <title>SitStayCreate</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./Midiosc_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="./Midiosc_files/style.css">
+        <script src="./Midiosc_files/jquery.min.js.download"></script>
+        <script src="./Midiosc_files/jquery-3.4.1.slim.min.js.download" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="./Midiosc_files/popper.min.js.download" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="./Midiosc_files/bootstrap.min.js.download" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
 
-    <title>SitStayCreate</title>
-    <link rel="stylesheet" href="./Midiosc_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Midiosc_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Midiosc_files/style.css">
-<script src="./Midiosc_files/jquery.min.js.download"></script><script src="./Midiosc_files/jquery-3.4.1.slim.min.js.download" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><script src="./Midiosc_files/popper.min.js.download" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="./Midiosc_files/bootstrap.min.js.download" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
-    
+    <body>
+        
 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="http://localhost:8080/ssc/">SitStayCreate</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="http://localhost:8080/ssc/about">About</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="http://localhost:8080/ssc/documentation/midiosc">midiosc</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;max_projects&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="http://localhost:8080/ssc/documentation">Max projects</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;links&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="http://localhost:8080/ssc/links">Links</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-
-
-
-<body>
-    
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="http://localhost:8080/ssc/">SitStayCreate</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
-                <a class="nav-link" href="http://localhost:8080/ssc/about">About</a>
-            </li>
-            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
-                <a class="nav-link" href="http://localhost:8080/ssc/documentation/midiosc">midiosc</a>
-            </li>
-            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;max_projects&#39; else &#39;&#39; }}">
-                <a class="nav-link" href="http://localhost:8080/ssc/documentation">Max projects</a>
-            </li>
-            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;links&#39; else &#39;&#39; }}">
-                <a class="nav-link" href="http://localhost:8080/ssc/links">Links</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-    
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb bg-white">
-            <li class="breadcrumb-item" aria-current="page"><a href="http://localhost:8080/ssc">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page"><a href="http://localhost:8080/ssc/documentation">Docs</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Midiosc</li>
-        </ol>
-    </nav>
-    <div class="card mx-5 mb-5 justify-content-center">
-        <div class="card-header bg-dark text-light">
-            <h1 class="display-4 text-center">Midiosc</h1>
-        </div>
-        <div class="card-body">
-            <div class="mx-5 mb-3">
-                <div style="padding:62.5% 0 0 0;position:relative;">
-                    <iframe src="./Midiosc_files/572275423.html" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="midiosc1.1.0-demo.mov"></iframe>
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item" aria-current="page"><a href="http://localhost:8080/ssc">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="http://localhost:8080/ssc/documentation">Docs</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Midiosc</li>
+            </ol>
+        </nav>
+        <div class="card mx-5 mb-5 justify-content-center">
+            <div class="card-header bg-dark text-light">
+                <h1 class="display-4 text-center">Midiosc</h1>
+            </div>
+            <div class="card-body">
+                <div class="mx-5 mb-3">
+                    <div style="padding:62.5% 0 0 0;position:relative;">
+                        <iframe src="./Midiosc_files/572275423.html" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="midiosc1.1.0-demo.mov"></iframe>
+                    </div>
+                    <script src="./Midiosc_files/player.js(1).download"></script>
                 </div>
-                <script src="./Midiosc_files/player.js(1).download"></script>
-            </div>
-            <h3 class="text-center">A Monome OSC server for midi devices</h3>
-            <p>
-                Midiosc is a Java Swing app that acts as a bridge between applications designed for the Monome Grid and grid controllers that communicate over MIDI.
-                It also provides the ability to create virtual grids that respond to mouse clicks. The goal of midiosc is to provide an entry point for anyone curious
-                about Monome, electronic music, or programming to try building their own instrument.
-            </p>
-            <p>
-                Navigate to <a href="https://github.com/SitStayCreate/midiosc">https://github.com/SitStayCreate/midiosc</a> and download the JAR file located
-                there. Midiosc is a Java application that requires Java 8 to run. Please download the JRE if you do not already have it installed on your machine.
-                You can find this at <a href="https://www.oracle.com/">Oracle.com</a>
-            </p>
-            <div>
-                <h3 class="text-center">Introduction</h3>
+                <h3 class="text-center">A Monome OSC server for midi devices</h3>
                 <p>
-                    There is an organization named Monome you may never have heard of, but the music you listen to would not be the same if they did not exist.
-                    They make a variety of electronic instruments and controllers, but what makes them unique is that they are less focused on profits and more
-                    focused on impact.
+                    Midiosc is a Java Swing app that acts as a bridge between applications designed for the Monome Grid and grid controllers that communicate over MIDI.
+                    It also provides the ability to create virtual grids that respond to mouse clicks. The goal of midiosc is to provide an entry point for anyone curious
+                    about Monome, electronic music, or programming to try building their own instrument.
                 </p>
                 <p>
-                    Their most iconic product is the Grid, an array of decoupled lights and buttons that is built to be redesigned. The genius
-                    of the Grid isn't its sleek design or sustainably sourced and high quality parts. The genius of the grid is how easy it is to hack. Before
-                    the maker era where everyone knows somebody with a 3d printer, Monome created a visionary product that invited the consumer to play the role
-                    of producer. The controller itself does nothing without 3rd party software. Monome provides some very helpful training documents and some
-                    ready to use and interesting examples, but these are not part of the controller, they are available for anyone to use.
+                    Navigate to <a href="https://github.com/SitStayCreate/midiosc">https://github.com/SitStayCreate/midiosc</a> and download the JAR file located
+                    there. Midiosc is a Java application that requires Java 8 to run. Please download the JRE if you do not already have it installed on your machine.
+                    You can find this at <a href="https://www.oracle.com/">Oracle.com</a>
+                </p>
+                <div>
+                    <h3 class="text-center">Introduction</h3>
+                    <p>
+                        There is an organization named Monome you may never have heard of, but the music you listen to would not be the same if they did not exist.
+                        They make a variety of electronic instruments and controllers, but what makes them unique is that they are less focused on profits and more
+                        focused on impact.
+                    </p>
+                    <p>
+                        Their most iconic product is the Grid, an array of decoupled lights and buttons that is built to be redesigned. The genius
+                        of the Grid isn't its sleek design or sustainably sourced and high quality parts. The genius of the grid is how easy it is to hack. Before
+                        the maker era where everyone knows somebody with a 3d printer, Monome created a visionary product that invited the consumer to play the role
+                        of producer. The controller itself does nothing without 3rd party software. Monome provides some very helpful training documents and some
+                        ready to use and interesting examples, but these are not part of the controller, they are available for anyone to use.
+                    </p>
+                    <p>
+                        The Monome story could end right here and they would have still earned their place with the Robert Moog's and Leon Theremin's of history.
+                        But it does not end with the Grid. Instead of doing what so many others would after experiencing success, they choose to remain small
+                        and to keep focusing on impact instead of profits.
+                    </p>
+                    <p>
+                        Copied by many and rivaled by none, their efforts have inspired an entire community and their forum serves as a gathering place for
+                        the creators of many open source projects. Rather than fight for a piece of an imaginary pie, we hope to increase the long-term viability
+                        of their projects by using our efforts to +1 their ideas. It's only a zero-sum game if you make it that way. Now, let's begin.
+                    </p>
+                    <h3 class="text-center">Serialosc</h3>
+                    <p>
+                        Monome's Grid controller is a device that communicates via USB. However, the apps that the Grid communicates with communicate using a
+                        network protocol called OSC. OSC (open sound control) was created as an alternative to the MIDI protocol. In order for a serial device
+                        to communicate with these apps, we need a third app to act as a translator or bridge. Monome's serialosc program provides this function
+                        in their ecosystem. It listens for serial devices and assigns them a port to communicate over OSC.
+                    </p>
+                </div>
+                <h3 class="text-center">Stopping serialoscd</h3>
+                <p>
+                    Serialosc runs as a daemon (background process) and listens on port 12002. If you have serialosc installed
+                    you will need to stop it or midiosc will not work.
+                </p>
+                <div class="my-3">
+                    <img src="./Midiosc_files/stop-serialosc.png" class="home-card-image img-fluid d-block mx-auto">
+                </div>
+                <p>
+                    To do this with macOS, run the following command in terminal:
+                    launchctl unload /Library/LaunchAgents/org.monome.serialosc.plist
                 </p>
                 <p>
-                    The Monome story could end right here and they would have still earned their place with the Robert Moog's and Leon Theremin's of history.
-                    But it does not end with the Grid. Instead of doing what so many others would after experiencing success, they choose to remain small
-                    and to keep focusing on impact instead of profits.
+                    We haven't tested how to do this in Windows because we don't have a Windows machine we use to make music,
+                    but we think Stop-Process in PowerShell would work if you can't stop it in task manager. If you have a Windows 10 machine where
+                    you need help with this, reach out to us on Github. We would use the opportunity to document this for Windows users.
+                </p>
+                <h3 class="text-center">Midi to OSC adapter</h3>
+                <div class="my-3">
+                    <img src="./Midiosc_files/midiosc-1.1.0(1).png" class="home-card-image img-fluid d-block mx-auto">
+                </div>
+                <p>
+                    To create a virtual OSC device, first select your MIDI controller from the dropdown menus in midiosc. The MIDI in dropdown menu chooses
+                    the device that will be sending MIDI data to midiosc. The MIDI out dropdown menu selects the device that will be receiving MIDI data from
+                    midiosc.
                 </p>
                 <p>
-                    Copied by many and rivaled by none, their efforts have inspired an entire community and their forum serves as a gathering place for
-                    the creators of many open source projects. Rather than fight for a piece of an imaginary pie, we hope to increase the long-term viability
-                    of their projects by using our efforts to +1 their ideas. It's only a zero-sum game if you make it that way. Now, let's begin.
+                    Next, select the port you would like midiosc to use to receive messages from external apps. Please note, some ports are reserved and may not
+                    be used. Please also note, a port may only be opened by one virtual OSC device.
                 </p>
-                <h3 class="text-center">Serialosc</h3>
                 <p>
-                    Monome's Grid controller is a device that communicates via USB. However, the apps that the Grid communicates with communicate using a
-                    network protocol called OSC. OSC (open sound control) was created as an alternative to the MIDI protocol. In order for a serial device
-                    to communicate with these apps, we need a third app to act as a translator or bridge. Monome's serialosc program provides this function
-                    in their ecosystem. It listens for serial devices and assigns them a port to communicate over OSC.
+                    Finally, select the dimensions for your MIDI controller and click create. You currently can choose from an 8x8 grid or a 16x8 grid. The checkbox
+                    labeled Invert Y-Axis sets the orientation of your controller. Regular orientation in this case is 0-63/127 starting at the top left corner and
+                    ending at the bottom right corner. Inverted orientation, then, starts at the bottom left corner and ends at the top right corner. APC Mini
+                    controllers have inverted orientation, while the Pads object in Lemur has regular orientation, for example.
+                </p>
+                <h3 class="text-center">Virtual grid</h3>
+                <div class="my-3">
+                    <img src="./Midiosc_files/midiosc-1.1.0(2).png" class="home-card-image img-fluid d-block mx-auto">
+                </div>
+                <p>
+                    As of midiosc 1.1.0, you also can create a virtual grid if you don't have a midi controller and still want to build your own app.
+                    This was something we built to prototype apps on different machines and for others to be able to collaborate without investing in hardware.
+                    The short demo video at the top of this page is using this feature with Monome's app named Meadowphysics for Max 7.
+                </p>
+                <p>
+                    Midiosc has some additional limitations. If you are someone who is familiar with Monome's products, you may have come here looking for an Arc emulator.
+                    Midiosc does not respond to messages for the Arc controller. The reason for this is there really isn't a midi controller that can emulate an Arc,
+                    we have never used an Arc so will have difficulty designing a virtual version of one, and we are more interested in multitouch and capacitive controllers
+                    than rotary controllers at the moment.
+                </p>
+                <p>
+                    This is to say, at the moment, this is as far as we plan on going with this project. We have released the source code under a GPL3 license, so feel free to take a
+                    stab at it yourself. Also, lastly, I want to thank everyone who has worked on the JavaOSC library (Illposed, hoijui, etc).
+                    This library is well-designed, well-maintained, and easy to use.
                 </p>
             </div>
-            <h3 class="text-center">Stopping serialoscd</h3>
-            <p>
-                Serialosc runs as a daemon (background process) and listens on port 12002. If you have serialosc installed
-                you will need to stop it or midiosc will not work.
-            </p>
-            <div class="my-3">
-                <img src="./Midiosc_files/stop-serialosc.png" class="home-card-image img-fluid d-block mx-auto">
-            </div>
-            <p>
-                To do this with macOS, run the following command in terminal:
-                launchctl unload /Library/LaunchAgents/org.monome.serialosc.plist
-            </p>
-            <p>
-                We haven't tested how to do this in Windows because we don't have a Windows machine we use to make music,
-                but we think Stop-Process in PowerShell would work if you can't stop it in task manager. If you have a Windows 10 machine where
-                you need help with this, reach out to us on Github. We would use the opportunity to document this for Windows users.
-            </p>
-            <h3 class="text-center">Midi to OSC adapter</h3>
-            <div class="my-3">
-                <img src="./Midiosc_files/midiosc-1.1.0(1).png" class="home-card-image img-fluid d-block mx-auto">
-            </div>
-            <p>
-                To create a virtual OSC device, first select your MIDI controller from the dropdown menus in midiosc. The MIDI in dropdown menu chooses
-                the device that will be sending MIDI data to midiosc. The MIDI out dropdown menu selects the device that will be receiving MIDI data from
-                midiosc.
-            </p>
-            <p>
-                Next, select the port you would like midiosc to use to receive messages from external apps. Please note, some ports are reserved and may not
-                be used. Please also note, a port may only be opened by one virtual OSC device.
-            </p>
-            <p>
-                Finally, select the dimensions for your MIDI controller and click create. You currently can choose from an 8x8 grid or a 16x8 grid. The checkbox
-                labeled Invert Y-Axis sets the orientation of your controller. Regular orientation in this case is 0-63/127 starting at the top left corner and
-                ending at the bottom right corner. Inverted orientation, then, starts at the bottom left corner and ends at the top right corner. APC Mini
-                controllers have inverted orientation, while the Pads object in Lemur has regular orientation, for example.
-            </p>
-            <h3 class="text-center">Virtual grid</h3>
-            <div class="my-3">
-                <img src="./Midiosc_files/midiosc-1.1.0(2).png" class="home-card-image img-fluid d-block mx-auto">
-            </div>
-            <p>
-                As of midiosc 1.1.0, you also can create a virtual grid if you don't have a midi controller and still want to build your own app.
-                This was something we built to prototype apps on different machines and for others to be able to collaborate without investing in hardware.
-                The short demo video at the top of this page is using this feature with Monome's app named Meadowphysics for Max 7.
-            </p>
-            <p>
-                Midiosc has some additional limitations. If you are someone who is familiar with Monome's products, you may have come here looking for an Arc emulator.
-                Midiosc does not respond to messages for the Arc controller. The reason for this is there really isn't a midi controller that can emulate an Arc,
-                we have never used an Arc so will have difficulty designing a virtual version of one, and we are more interested in multitouch and capacitive controllers
-                than rotary controllers at the moment.
-            </p>
-            <p>
-                This is to say, at the moment, this is as far as we plan on going with this project. We have released the source code under a GPL3 license, so feel free to take a
-                stab at it yourself. Also, lastly, I want to thank everyone who has worked on the JavaOSC library (Illposed, hoijui, etc).
-                This library is well-designed, well-maintained, and easy to use.
-            </p>
         </div>
-    </div>
 
-    
+        
 
-<footer class="bg-dark text-light fixed-bottom">
-<div class="container">
-    <p>
-    </p><div class="row justify-content-center">
-        <div class="col-4 text-center">
-            <small>contact:</small>
-            <a href="https://www.github.com/sitstaycreate"><i class="fa fa-github-alt"></i></a>
-        </div>
-    </div>
-    <p></p>
-</div>
-</footer>
-
-
-</body></html>
+        <footer class="bg-dark text-light fixed-bottom">
+            <div class="container">
+                <p>
+                </p><div class="row justify-content-center">
+                    <div class="col-4 text-center">
+                        <small>contact:</small>
+                        <a href="https://www.github.com/sitstaycreate"><i class="fa fa-github-alt"></i></a>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+        </footer>
+    </body>
+</html>
