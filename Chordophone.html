@@ -1,0 +1,124 @@
+
+<!-- saved from url=(0059)http://localhost:8080/ssc_website/documentation/chordophone -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Chordophone</title>
+    
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="./Chordophone_files/analytics.js.download"></script><script async="" src="./Chordophone_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-194353784-1');
+    </script>
+
+
+    <title>SitStayCreate</title>
+    <link rel="stylesheet" href="./Chordophone_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Chordophone_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Chordophone_files/style.css">
+<script src="./Chordophone_files/jquery.min.js.download"></script><script src="./Chordophone_files/jquery-3.4.1.slim.min.js.download" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><script src="./Chordophone_files/popper.min.js.download" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="./Chordophone_files/bootstrap.min.js.download" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
+    
+
+
+
+
+
+
+
+<body>
+    
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="http://localhost:8080/ssc/">SitStayCreate</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                <a class="nav-link" href="http://localhost:8080/ssc/about">About</a>
+            </li>
+            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
+                <a class="nav-link" href="http://localhost:8080/ssc/documentation/midiosc">midiosc</a>
+            </li>
+            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;max_projects&#39; else &#39;&#39; }}">
+                <a class="nav-link" href="http://localhost:8080/ssc/documentation">Max projects</a>
+            </li>
+            <li class="nav-item {{ &#39;active&#39; if active_page == &#39;links&#39; else &#39;&#39; }}">
+                <a class="nav-link" href="http://localhost:8080/ssc/links">Links</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+            <li class="breadcrumb-item" aria-current="page"><a href="http://localhost:8080/ssc">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page"><a href="http://localhost:8080/ssc/documentation">Docs</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chordophone</li>
+        </ol>
+    </nav>
+    <div class="card mx-5 mb-5 justify-content-center">
+        <div class="card-header bg-dark text-light">
+            <h1 class="display-4 text-center">Chordophone</h1>
+        </div>
+        <div class="card-body">
+            <h3 class="text-center">Intro</h3>
+            <div class="my-3">
+                <img src="./Chordophone_files/chordophone.png" class="home-card-image img-fluid d-block mx-auto">
+            </div>
+            <p>
+                This patch is to be used with a Monome Grid, specifically one with 128 buttons oriented horizontally. If you do
+                not have a Monome Grid, our app midiosc will allow you to use this patch with a Midi controller or
+                with your mouse with midiosc v1.1.0.
+            </p>
+            <h3 class="text-center">Manual</h3>
+            <p>
+                A chordophone is in the simplest sense, a stringed instrument. Guitars, zithers, harps, lutes, etc. are all examples
+                of chordophones. This patch aspires to provide a similar feel to using a dulcimer and an autoharp, but maybe lands
+                somewhere closer to a chord organ.
+            </p>
+            <div class="my-3">
+                <img src="./Chordophone_files/grid.png" class="home-card-image img-fluid d-block mx-auto">
+            </div>
+            <p>
+                The top row provides global functionality and tunes the two instruments to a note (buttons [0 0]-[11 0] A-G#) and
+                either the Ionian, Aeolian, or Dorian mode (buttons [12 0]-[14 0]). The instrument will also allow you to switch
+                between two selected modes by toggling button [15 0]. This will give you the flexibility to change keys on the fly
+                during a performance.
+            </p>
+            <p>
+                The left half of the bottom seven rows will trigger triads. The right half of the bottom seven rows will trigger individual notes.
+                Up one row is up an octave, over one column is up a scale degree.
+            </p>
+            <p>
+                The repo for chordophone can be found here: <a href="https://github.com/SitStayCreate/MaxExternals">https://github.com/SitStayCreate/MaxExternals</a>.
+                Special thanks to Derek Cohen for his guidance on this project.
+            </p>
+        </div>
+    </div>
+
+    
+
+<footer class="bg-dark text-light fixed-bottom">
+<div class="container">
+    <p>
+    </p><div class="row justify-content-center">
+        <div class="col-4 text-center">
+            <small>contact:</small>
+            <a href="https://www.github.com/sitstaycreate"><i class="fa fa-github-alt"></i></a>
+        </div>
+    </div>
+    <p></p>
+</div>
+</footer>
+
+
+</body></html>
