@@ -1,0 +1,57 @@
+/* home page */
+
+.home-card-image
+{
+    max-height: 500px;
+}
+
+#touchstrip
+{
+    width: 100%;
+    background-color: slategray;
+}
+
+.voice-label
+{
+    color: lightblue;
+}
+
+.osc-label
+{
+    color: lightblue;
+}
+
+.filter-label
+{
+    color: lightblue;
+}
+
+.amp-label
+{
+    color: gold;
+}
+
+.env-label
+{
+    color: gold;
+}
+
+.main-label
+{
+    color: gold;
+}
+
+.fx-label
+{
+    color: orangered;
+}
+
+.dly-label
+{
+    color: orangered;
+}
+
+.rvrb-label
+{
+    color: orangered;
+}
