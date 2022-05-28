@@ -1,27 +1,65 @@
 /* home page */
 
-.home-card-image
+.drd-01-synth
 {
-    max-height: 500px;
+    height: 600px;
+    max-height: 600px;
+    align-content: center;
 }
 
-#touchstrip
+#drd-01-synth-large
+{
+    width: 700px;
+    max-width: 700px;
+}
+
+#drd-01-synth-small
+{
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
+}
+
+#touchstrip-panel
 {
     width: 100%;
+    align-items: center;
+}
+
+#touchstrip {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
     background-color: slategray;
 }
 
+#pills-VoicesPanel-tab
+{
+    background-color: lightblue;
+    text-align: center;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#pills-AmpPanel-tab
+{
+    background-color: orange;
+    text-align: center;
+    width: 100px;
+    margin-top: 10px;
+}
+
+#pills-EffectsPanel-tab
+{
+    background-color: red;
+    text-align: center;
+    width: 100px;
+    margin-top: 10px;
+}
+
 .voice-label
-{
-    color: lightblue;
-}
-
-.osc-label
-{
-    color: lightblue;
-}
-
-.filter-label
 {
     color: lightblue;
 }
@@ -31,27 +69,16 @@
     color: gold;
 }
 
-.env-label
-{
-    color: gold;
-}
-
-.main-label
-{
-    color: gold;
-}
-
 .fx-label
 {
     color: orangered;
 }
 
-.dly-label
+.synth-param
 {
-    color: orangered;
+    width: 75px;
 }
-
-.rvrb-label
+.MainPanel
 {
-    color: orangered;
+    height: 425px;
 }
