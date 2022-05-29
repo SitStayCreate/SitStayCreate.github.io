@@ -18,15 +18,20 @@
 /* Mobile version */
 #drd-01-synth-small
 {
-    height: 550px;
+    height: 425px;
     width: 300px;
     max-width: 300px;
 }
 
 /* The top half of the synth */
-.MainPanel
+#MainPanel-large
 {
     height: 375px;
+}
+
+#MainPanel-small
+{
+    height: 250px;
 }
 
 /* Labels spacing for MainPanel */
