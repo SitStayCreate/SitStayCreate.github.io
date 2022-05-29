@@ -70,8 +70,13 @@
                                     <label class="voice-label">4</label>
                         </div>
                         <div class="voices" id="voice0">
-                            <div class="oscillator0">
-                                <h5 class="text-center voice-label">Oscillator</h5>
+                            <div class="voice-section-selector-container">
+                                <label class="voice-label">Oscillator</label>
+                                <input type="range" id="voice-section-selector0" 
+                                min="0" max="1" value="0" step="1"></input>
+                                <label class="voice-label">Filter</label>
+                            </div>
+                            <div id="osc0-container">
                                 <div>
                                     <label  class="voice-label synth-param">Shape:</label>
                                     <select name="waveform0" id="waveform0">
@@ -90,8 +95,7 @@
                                 <label class="voice-label synth-param">Tune: </label>
                                 <input type="range" id="osc0tune" min="-50" max="50" value="0" step="1"></input>
                             </div>
-                            <div class="filter0">
-                                <h5 class="text-center voice-label">Filter</h5>
+                            <div id="filter0-container" hidden>
                                 <div>
                                     <label class="voice-label synth-param">Type: </label>
                                     <select name="f0Type" id="f0Type">
@@ -111,9 +115,14 @@
                             </div>
                         </div>
                         <div class="voices" id="voice1" hidden>
-                            <div class="oscillator1">
+                            <div class="voice-section-selector-container">
+                                <label class="voice-label">Oscillator</label>
+                                <input type="range" id="voice-section-selector1" 
+                                min="0" max="1" value="0" step="1"></input>
+                                <label class="voice-label">Filter</label>
+                            </div>
+                            <div id="osc1-container">
                                 <div>
-                                    <h5 class="text-center voice-label">Oscillator</h5>
                                     <label class="voice-label synth-param">Shape:</label>
                                     <select name="waveform1" id="waveform1">
                                         <option value="sine">sine</option>
@@ -133,8 +142,7 @@
                                     <input type="range" id="osc1tune" min="-50" max="50" value="0" step="1"></input>
                                 </div>
                             </div>
-                            <div class="filter1">
-                                <h5 class="text-center voice-label">Filter</h5>
+                            <div id="filter1-container" hidden>
                                 <div>
                                     <label class="voice-label synth-param">Type: </label>
                                     <select name="f1Type" id="f1Type">
@@ -154,8 +162,13 @@
                             </div>
                         </div>
                         <div class="voices" id="voice2" hidden>
-                            <div class="oscillator2">
-                                <h5 class="text-center voice-label">Oscillator</h5>
+                            <div class="voice-section-selector-container">
+                                <label class="voice-label">Oscillator</label>
+                                <input type="range" id="voice-section-selector2" 
+                                min="0" max="1" value="0" step="1"></input>
+                                <label class="voice-label">Filter</label>
+                            </div>
+                            <div id="osc2-container">
                                 <div>
                                     <label class="voice-label synth-param">Shape:</label>
                                     <select name="waveform2" id="waveform2">
@@ -176,8 +189,7 @@
                                     <input type="range" id="osc2tune" min="-50" max="50" value="0" step="1"></input>
                                 </div>
                             </div>
-                            <div class="filter2">
-                                <h5 class="text-center voice-label">Filter</h5>
+                            <div id="filter2-container" hidden>
                                 <div>
                                     <label class="voice-label synth-param">Type: </labeL>
                                     <select name="f2Type" id="f2Type">
@@ -197,9 +209,14 @@
                             </div>
                         </div>
                         <div class="voices" id="voice3" hidden>
-                            <div class="oscillator3">
+                            <div class="voice-section-selector-container">
+                                <label class="voice-label">Oscillator</label>
+                                <input type="range" id="voice-section-selector3" 
+                                min="0" max="1" value="0" step="1"></input>
+                                <label class="voice-label">Filter</label>
+                            </div>
+                            <div id="osc3-container">
                                 <div></div>
-                                <h5 class="text-center voice-label">Oscillator</h5>
                                 <label class="voice-label synth-param">Shape:</label>
                                 <select name="waveform3" id="waveform3">
                                     <option value="sine">sine</option>
@@ -216,8 +233,7 @@
                                 <label class="voice-label synth-param">Tune: </label>
                                 <input type="range" id="osc3tune" min="-50" max="50" value="0" step="1"></input>
                             </div>
-                            <div class="filter3">
-                                <h5 class="voice-label text-center">Filter</h5>
+                            <div id="filter3-container" hidden>
                                 <div>
                                     <label class="voice-label synth-param">Type: </label>
                                     <select name="f3Type" id="f3Type">
@@ -239,8 +255,13 @@
                     </div>
                     <div id = "AmpPanel" aria-labelledby="AmpPanel" hidden>
                         <div class="amplifier">
-                            <div class="adsr mb-3">
-                                <h5 class="text-center amp-label">Envelope</h5>
+                            <div class="amp-section-selector-container">
+                                <label class="amp-label">Envelope</label>
+                                <input type="range" id="amp-section-selector" 
+                                min="0" max="1" value="0" step="1"></input>
+                                <label class="amp-label">Main</label>
+                            </div>
+                            <div id="envelope-container">
                                 <div>
                                     <label class="amp-label synth-param">Attack: </label>
                                     <input type="range" id="Attack" min="0" max="1" value=".5" step=".1"></input>
@@ -258,8 +279,7 @@
                                     <input type="range" id="Release" min="0" max="1" value=".8" step=".1"></input>
                                 </div>
                             </div>
-                            <div class="main mb-3">
-                                <h5 class="text-center amp-label">Main</h5>
+                            <div id="main-container" hidden>
                                 <div>
                                     <label class="amp-label synth-param">Volume: </label>
                                     <input type="range" id="mainVol" min="-48" max="-6" value="-36" step=".1"></input>
@@ -275,9 +295,14 @@
                     </div>
                     <div id="EffectsPanel" aria-labelledby="EffectsPanel" hidden>
                         <div class="effects">
+                            <div class="fx-section-selector-container">
+                                <label class="fx-label">Delay</label>
+                                <input type="range" id="fx-section-selector" 
+                                min="0" max="1" value="0" step="1"></input>
+                                <label class="fx-label">Reverb</label>
+                            </div>
                             <div class="mb-3" id="dly-container">
                                 <div>
-                                    <label class="fx-label synth-param">Delay</label>
                                     <input type="checkbox" id="delayToggle">
                                         <label class="fx-label">on</label>
                                     </input>
@@ -295,9 +320,8 @@
                                     <input type="range" id="delayDryWet" min="0" max="1" value="0.5" step=".01"></input>
                                 </div>
                             </div>
-                            <div id="rvrb-container">
+                            <div id="rvrb-container" hidden>
                                 <div>
-                                    <label class="fx-label synth-param">Reverb</label>
                                     <input type="checkbox" id="reverbToggle">
                                         <label class="fx-label synth-param">on</label>
                                     </input>
@@ -329,6 +353,7 @@
 </body>
 <footer>
     <script src="./static/javascript/DRD-01/drd01.js"></script>
+    <script src="./static/javascript/DRD-01/mobile.js"></script>
     <link rel="stylesheet" href="./static/css/DRD-01/DRD-01.css">
 </footer>
 </html>
