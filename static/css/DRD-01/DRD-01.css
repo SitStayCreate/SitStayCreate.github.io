@@ -2,19 +2,21 @@
 
 .drd-01-synth
 {
-    height: 600px;
-    max-height: 600px;
+    height: 575px;
+    max-height: 575px;
     align-content: center;
+    margin:auto;
 }
 
 #drd-01-synth-large
 {
-    width: 700px;
-    max-width: 700px;
+    width: 730px;
+    max-width: 730px;
 }
 
 #drd-01-synth-small
 {
+    height: 550px;
     width: 300px;
     max-width: 300px;
 }
@@ -79,5 +81,5 @@
 }
 .MainPanel
 {
-    height: 425px;
+    height: 375px;
 }
