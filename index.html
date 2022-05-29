@@ -51,19 +51,13 @@
     <div class="card mx-5 drd-01-synth" id="drd-01-synth-small">
         <div class="card-header bg-dark text-light" id="drd-01-params">
             <div class="MainPanel" id="MainPanel-small">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-VoicesPanel-tab" data-toggle="pill" href="#VoicesPanel" role="tab" aria-controls="pills-VoicesPanel" aria-selected="true">Vox</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-AmpPanel-tab" data-toggle="pill" href="#AmpPanel" role="tab" aria-controls="pills-AmpPanel" aria-selected="false">Amp</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-EffectsPanel-tab" data-toggle="pill" href="#EffectsPanel" role="tab" aria-controls="pills-EffectsPanel" aria-selected="false">Fx</a>
-                    </li>
-                </ul>
-                <div class="tab-content mt-3">
-                    <div class="tab-pane show active" id="VoicesPanel" role="tabpanel" aria-labelledby="VoicesPanel">
+                <div id="MainPanel-section-controls">
+                    <button id="voices-tab">Voices</button>
+                    <button id="amp-tab">Amp</button>
+                    <button id="effects-tab">Effects</button>
+                </div>
+                <div class="mt-3" id="MainPanel-sections">
+                    <div id="VoicesPanel" aria-labelledby="VoicesPanel">
                         <div class="voice-radios">
                                     <label class="voice-label synth-param">Voice:</label>
                                     <input type="radio" id="vButton0" name="voiceRadios" value="voice0" checked>
@@ -243,7 +237,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id = "AmpPanel" role="tabpanel" aria-labelledby="AmpPanel">
+                    <div id = "AmpPanel" aria-labelledby="AmpPanel" hidden>
                         <div class="amplifier">
                             <div class="adsr mb-3">
                                 <h5 class="text-center amp-label">Envelope</h5>
@@ -279,7 +273,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="EffectsPanel" role="tabpanel" aria-labelledby="EffectsPanel">
+                    <div id="EffectsPanel" aria-labelledby="EffectsPanel" hidden>
                         <div class="effects">
                             <div class="mb-3" id="dly-container">
                                 <div>
@@ -323,10 +317,10 @@
             </div>
         </div>
         <div class="card-body bg-warning text-light" id="touchstrip-panel">
-                <div id="touchstrip">
-                    <div class="mt-3" id="touchstrip-label0">Touchstrip Synth</div>
-                    <div id="touchstrip-label1">click here to play</div>
-                </div>
+            <div id="touchstrip">
+                <div class="mt-3" id="touchstrip-label0">Touchstrip Synth</div>
+                <div id="touchstrip-label1">click here to play</div>
+            </div>
         </div>
     </div>
     <div class="mx-5" id="version-link">
@@ -335,7 +329,6 @@
 </body>
 <footer>
     <script src="./static/javascript/DRD-01/drd01.js"></script>
-    <script src="touchstriplabel.js"></script>
     <link rel="stylesheet" href="./static/css/DRD-01/DRD-01.css">
 </footer>
 </html>
