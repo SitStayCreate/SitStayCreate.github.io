@@ -15,9 +15,8 @@
 
 #drd-01-synth-small
 {
-    width: 400px;
-    max-width: 400px;
-    min-width: 400px;
+    width: 300px;
+    max-width: 300px;
 }
 
 #touchstrip-panel
@@ -38,7 +37,7 @@
 {
     background-color: lightblue;
     text-align: center;
-    width: 100px;
+    width: 70px;
     margin-top: 10px;
     margin-left: 20px;
 }
@@ -47,7 +46,7 @@
 {
     background-color: orange;
     text-align: center;
-    width: 100px;
+    width: 70px;
     margin-top: 10px;
 }
 
@@ -55,7 +54,7 @@
 {
     background-color: red;
     text-align: center;
-    width: 100px;
+    width: 70px;
     margin-top: 10px;
 }
 
