@@ -1,9 +1,8 @@
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>DiatonicPads</title>
-        
-
+        <title>Fund my projects</title>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194353784-1"></script>
@@ -14,20 +13,16 @@
 
             gtag('config', 'UA-194353784-1');
         </script>
-
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
-        
-        <title>SitStayCreate</title>
 
+        <title>SitStayCreate</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./static/css/style.css">
     </head>
     <body>
-        
-
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="https://sitstaycreate.github.io/">SitStayCreate</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +34,7 @@
                     <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
                         <a class="nav-link" href="About.html">About</a>
                     </li>
-                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;CerealOSC&#39; else &#39;&#39; }}">
                         <a class="nav-link" href="CerealOSC.html">CerealOSC</a>
                     </li>
                     <li class="nav-item {{ &#39;active&#39; if active_page == &#39;max_projects&#39; else &#39;&#39; }}">
@@ -55,39 +50,37 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-white">
                 <li class="breadcrumb-item" aria-current="page"><a href="https://sitstaycreate.github.io/">Home</a></li>
-                <li class="breadcrumb-item" aria-current="page"><a href="Max.html">Max Projects</a></li>
-                <li class="breadcrumb-item active" aria-current="page">DiatonicPads</li>
+                <li class="breadcrumb-item active" aria-current="page">Patreon</li>
             </ol>
         </nav>
-        <div class="card mx-5 mb-5 justify-content-center">
-            <div class="card-header bg-dark text-light">
-                <h1 class="display-4 text-center">Diatonic pads</h1>
+        <div class="card mx-5 mb-5">
+            <div class="card-header text-center bg-dark text-light">
+                <h1 class="display-4">Fundamentals</h1>
             </div>
-            <div class="card-body">
-                <h3 class="text-center">Introduction</h3>
+            <div class="card-body justify-content-center">
                 <div class="my-3">
-                    <img src="./static/images/DiatonicPads/Diatonic-pads.png" class="home-card-image img-fluid d-block mx-auto">
+                    <p>
+                        This website does not host ads and is completely non-commercial. The software I write is also
+                        100% non-commercial. This is separate from my music and any related merch sales. It is created
+                        in the spirit of the old web as well as to encourage others to do the same.
+                    </p>
+                    <p>
+                        I am passing the hat and asking kindly for any donations to help cover the costs of owning a
+                        domain, paying for an SSL certificate, and also costs for my email address. While this currently
+                        comes out to about the cost of one takeout meal per month, I hope to grow this project.
+                    </p>
+                    <p>
+                        I offer internships and the primary purpose of this site is educational. Technology can be fun
+                        and I hope to inspire others through my work.
+                    </p>
+                    <p>
+                        100% of your donations will be invested in the educational and open-source aspects of this project,
+                        as well as to help keep the lights on.
+                    </p>
+                    <p>
+                        Please visit my patreon and donate if you can. <a href="https://www.patreon.com/sitstaycreate">Patreon</a>
+                    </p>
                 </div>
-                <p>
-                    This project is a Max/MSP patch that extends the functionality of a velocity sensitive 4x4 pad controller as a melodic instrument. It should work with any 4x4 MIDI
-                    controller with minor configuration of the MIDI note values. If you're unfamiliar with Max/MSP, we have a short introduction we recommend reading
-                    first.
-                </p>
-                <h3 class="text-center">Manual</h3>
-                <p>
-                    Open a Web Browser and navigate to <a href="https://github.com/SitStayCreate/DiatonicPads">https://github.com/SitStayCreate/DiatonicPads</a>.
-                    Download the file 4x4_Tools.maxzip and open the project with Max/MSP. This project was built using Max 7. It probably will work
-                    with other versions, but no testing has been done.
-                </p>
-                <p>
-                    Assign the following midi values ascending from bottom left to top right and are in the key of C major from C4 - B5 or
-                    the note values 60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77, 79, 81, 83, 84, 86.
-                </p>
-                <p>
-                    Now connect your controller as you normally would and open the Max patch. Select your controller from the list of MIDI in devices. Also, select your target from
-                    the list of MIDI out devices. Now, try changing the settings for the key and the octave. You should notice that the pads change note values based
-                    on the settings.
-                </p>
             </div>
         </div>
     </body>
