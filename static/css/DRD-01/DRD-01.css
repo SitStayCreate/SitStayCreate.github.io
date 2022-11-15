@@ -1,11 +1,10 @@
 /* home page */
-/* All synths */
+
 .drd-01-synth
 {
-    height: 575px;
-    max-height: 575px;
+    height: 565px;
+    max-height: 565px;
     align-content: center;
-    margin:auto;
 }
 
 /* Desktop version */
@@ -40,9 +39,21 @@
     width: 75px;
 }
 
-/* Voices Panel */
-/* Button styling */
-#voices-tab
+#touchstrip-panel
+{
+    width: 100%;
+    align-items: center;
+}
+
+#touchstrip {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: slategray;
+}
+
+#osc-tab
 {
     background-color: lightblue;
     text-align: center;
@@ -51,56 +62,42 @@
     margin-left: 20px;
 }
 
-/* Label color */
-.voice-label
+#amp-tab
+{
+    background-color: orange;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+}
+
+#effects-tab
+{
+    background-color: red;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+}
+
+.oscLabel
 {
     color: lightblue;
 }
 
-/* Amp Panel */
-/* Button Styling */
-#amp-tab
-{
-    background-color: gold;
-    text-align: center;
-    width: 70px;
-    margin-top: 10px;
-}
-
-/* Label color */
-.amp-label
+.filterLabel
 {
     color: gold;
 }
 
-/* FX Panel */
-/* Button Styling */
-#effects-tab
-{
-    background-color: orangered;
-    text-align: center;
-    width: 70px;
-    margin-top: 10px;
-}
-
-/* Label Color */
 .fx-label
 {
     color: orangered;
 }
 
-/* Touchstrip panel - bottom half of synth */
-#touchstrip-panel
+.synth-param
 {
-    width: 100%;
-    align-items: center;
+    width: 75px;
 }
-
-/* Touchstrip */
-#touchstrip {
-    width: 100%;
-    height: 100px;
-    border: 1px solid black;
-    text-align: center;
-    background-color: slategray;
+.MainPanel
+{
+    height: 425px;
 }
