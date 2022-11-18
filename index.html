@@ -345,6 +345,10 @@
                                         <label  class="filterLabel synth-param">Q: </label>
                                         <input type="range" id="f0Q" min="0" max="10" value="3" step="1"></input>
                                     </div>
+                                    <div>
+                                        <label  class="filterLabel synth-param">Gain: </label>
+                                        <input type="range" id="gain0" min="0" max="10" value="3" step="1"></input>
+                                    </div>
                                 </div>
                                 <div class="filter" id="filter1" hidden>
                                     <div>
@@ -367,6 +371,10 @@
                                     <div>
                                         <label class="filterLabel synth-param">Q: </label>
                                         <input type="range" id="f1Q" min="0" max="10" value="3" step="1"></input>
+                                    </div>
+                                    <div>
+                                        <label  class="filterLabel synth-param">Gain: </label>
+                                        <input type="range" id="gain1" min="0" max="10" value="3" step="1"></input>
                                     </div>
                                 </div>
                             </div>
@@ -475,10 +483,11 @@
                     <div class="col SubPanel" id="outputPanel" aria-labelledby="OutputPanel" hidden>
                         <div class="outputRadios">
                             <label><h6 class="fx-label synth-param">Output:</h6></label>
-                            <input type="radio" name="outputRadios" id="outputRadio0" value="Main" checked>
-                            <label class="fx-label">Main</label>
-                            <input type="radio" name="outputRadios" id="outputRadio1" value="Effects">
-                            <label class="fx-label">Effects</label>
+                            <select name="outputMenu" id="outputMenu">
+                                <option value="Main">Main</option>
+                                <option value="Effects">Effects</option>
+                                <option value="Presets">Presets</option>
+                            </select>
                         </div>
                         <div class="mainContainer mb-3" id="mainContainer">
                             <div>
@@ -515,6 +524,12 @@
                                 <input type="range" id="reverbDryWet" min="0" max="1" value="0.5" step=".01"></input>
                             </div>
                         </div>
+                        <div class="presetContainer" id="presetContainer" hidden>
+                            <textarea id="textLoader" rows="5" cols="18"></textarea>
+                            <br>
+                            <input type="button" id = "saveButton" value="save">
+                            <input type="button" id = "loadButton" value="load">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -531,9 +546,10 @@
     </div>
 </body>
 <footer>
-    <script src="./static/javascript/DRD-01/drd01.js"></script>
-    <script src="./static/javascript/DRD-01/mobile.js"></script>
-    <script src="./static/javascript/DRD-01/pathSelector.js"></script>
+    <script type="module" src="./static/javascript/DRD-01/drd01.js"></script>
+    <script type="module" src="./static/javascript/DRD-01/mobile.js"></script>
+    <script type="module" src="./static/javascript/DRD-01/pathSelector.js"></script>
+    <script type="module" src="./static/javascript/DRD-01/presets.js"></script>
     <link rel="stylesheet" href="./static/css/DRD-01/DRD-01.css">
 </footer>
 </html>

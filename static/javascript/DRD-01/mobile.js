@@ -1,30 +1,23 @@
+import { MobileSelectorElements } from './Components/SelectorElements.js'
 //html elements
-
-//Tabs/Buttons for mobile
-const voiceButton = document.getElementById("osc-tab");
-const ampButton = document.getElementById("amp-tab");
-const effectsButton = document.getElementById("effects-tab");
-const panels = {osc: document.getElementById("oscPanel"),
-                filter: document.getElementById("filterPanel"),
-                output: document.getElementById("outputPanel")};
-
+var mobileSelectorElements = new MobileSelectorElements();
 // Selection Tabs/Buttons on mobile version
-voiceButton.addEventListener("click", (e) => {
-    panels.osc.hidden = false;
-    panels.filter.hidden = true;
-    panels.output.hidden = true;
+mobileSelectorElements.voiceButton.addEventListener("click", (e) => {
+    mobileSelectorElements.panels.osc.hidden = false;
+    mobileSelectorElements.panels.filter.hidden = true;
+    mobileSelectorElements.panels.output.hidden = true;
 });
 
 // Selection Tabs/Buttons on mobile version
-ampButton.addEventListener("click", (e) => {
-    panels.osc.hidden = true;
-    panels.filter.hidden = false;
-    panels.output.hidden = true;
+mobileSelectorElements.ampButton.addEventListener("click", (e) => {
+    mobileSelectorElements.panels.osc.hidden = true;
+    mobileSelectorElements.panels.filter.hidden = false;
+    mobileSelectorElements.panels.output.hidden = true;
 });
 
 // Selection Tabs/Buttons on mobile version
-effectsButton.addEventListener("click", (e) => {
-    panels.osc.hidden = true;
-    panels.filter.hidden = true;
-    panels.output.hidden = false;
+mobileSelectorElements.effectsButton.addEventListener("click", (e) => {
+    mobileSelectorElements.panels.osc.hidden = true;
+    mobileSelectorElements.panels.filter.hidden = true;
+    mobileSelectorElements.panels.output.hidden = false;
 });
