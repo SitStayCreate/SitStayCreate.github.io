@@ -8,6 +8,7 @@
     margin:auto;
 }
 
+<<<<<<< HEAD
 /* Desktop version */
 #drd-01-synth-large
 {
@@ -53,10 +54,42 @@
 
 /* Label color */
 .voice-label
+=======
+.drd-01-synth
 {
-    color: lightblue;
+    height: 565px;
+    max-height: 565px;
+    align-content: center;
 }
 
+/* Desktop version */
+#drd-01-synth-large
+{
+    width: 730px;
+    max-width: 730px;
+}
+
+/* Mobile version */
+#drd-01-synth-small
+{
+    height: 425px;
+    width: 320px;
+    max-width: 320px;
+}
+
+/* The top half of the synth */
+#MainPanel-large
+{
+    height: 375px;
+}
+
+#MainPanel-small
+>>>>>>> f67a2dc306dac08654bf0e268dd69f5a133594fe
+{
+    height: 250px;
+}
+
+<<<<<<< HEAD
 /* Amp Panel */
 /* Button Styling */
 #amp-tab
@@ -69,13 +102,65 @@
 
 /* Label color */
 .amp-label
+=======
+/* Labels spacing for MainPanel */
+.synth-param
 {
-    color: gold;
+    width: 75px;
 }
 
+#touchstrip-panel
+>>>>>>> f67a2dc306dac08654bf0e268dd69f5a133594fe
+{
+    width: 100%;
+    align-items: center;
+}
+
+#touchstrip {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: slategray;
+}
+
+#osc-tab
+{
+    background-color: lightblue;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#amp-tab
+{
+    background-color: orange;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+}
+
+#effects-tab
+{
+    background-color: red;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+}
+
+<<<<<<< HEAD
 /* FX Panel */
 /* Button Styling */
 #effects-tab
+=======
+.oscLabel
+{
+    color: lightblue;
+}
+
+.filterLabel
+>>>>>>> f67a2dc306dac08654bf0e268dd69f5a133594fe
 {
     background-color: orangered;
     text-align: center;
@@ -89,6 +174,7 @@
     color: orangered;
 }
 
+<<<<<<< HEAD
 /* Touchstrip panel - bottom half of synth */
 #touchstrip-panel
 {
@@ -103,4 +189,13 @@
     border: 1px solid black;
     text-align: center;
     background-color: slategray;
+=======
+.synth-param
+{
+    width: 75px;
+}
+.MainPanel
+{
+    height: 425px;
+>>>>>>> f67a2dc306dac08654bf0e268dd69f5a133594fe
 }
