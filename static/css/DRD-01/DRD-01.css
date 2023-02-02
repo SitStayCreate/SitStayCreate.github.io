@@ -1,57 +1,106 @@
 /* home page */
-
-.home-card-image
+/* All synths */
+.drd-01-synth
 {
-    max-height: 500px;
+    height: 575px;
+    max-height: 575px;
+    align-content: center;
+    margin:auto;
 }
 
-#touchstrip
+/* Desktop version */
+#drd-01-synth-large
 {
-    width: 100%;
-    background-color: slategray;
+    width: 730px;
+    max-width: 730px;
 }
 
+/* Mobile version */
+#drd-01-synth-small
+{
+    height: 425px;
+    width: 300px;
+    max-width: 300px;
+}
+
+/* The top half of the synth */
+#MainPanel-large
+{
+    height: 375px;
+}
+
+#MainPanel-small
+{
+    height: 250px;
+}
+
+/* Labels spacing for MainPanel */
+.synth-param
+{
+    width: 75px;
+}
+
+/* Voices Panel */
+/* Button styling */
+#voices-tab
+{
+    background-color: lightblue;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* Label color */
 .voice-label
 {
     color: lightblue;
 }
 
-.osc-label
+/* Amp Panel */
+/* Button Styling */
+#amp-tab
 {
-    color: lightblue;
+    background-color: gold;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
 }
 
-.filter-label
-{
-    color: lightblue;
-}
-
+/* Label color */
 .amp-label
 {
     color: gold;
 }
 
-.env-label
+/* FX Panel */
+/* Button Styling */
+#effects-tab
 {
-    color: gold;
+    background-color: orangered;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
 }
 
-.main-label
-{
-    color: gold;
-}
-
+/* Label Color */
 .fx-label
 {
     color: orangered;
 }
 
-.dly-label
+/* Touchstrip panel - bottom half of synth */
+#touchstrip-panel
 {
-    color: orangered;
+    width: 100%;
+    align-items: center;
 }
 
-.rvrb-label
-{
-    color: orangered;
+/* Touchstrip */
+#touchstrip {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: slategray;
 }

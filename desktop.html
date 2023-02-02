@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194353784-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-194353784-1');
+    </script>
+
+    <title>Tone.js with webpack</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="https://sitstaycreate.github.io/">SitStayCreate</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="Midiosc.html">midiosc</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="Max_Intro.html">Max Intro</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;chordophone&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="Chordophone.html">Chordophone</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;diatonicpads&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="DiatonicPads.html">DiatonicPads</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;liveclip&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="LiveClip.html">LiveClip</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;drd01&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="DRD01.html">DRD-01 Synth</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item" aria-current="page"><a href="https://sitstaycreate.github.io/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">DRD-01 Synth</li>
+            </ol>
+        </nav>
+    
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="card mx-5 drd-01-synth" id="drd-01-synth-large">
+                <div class="card-header bg-dark text-light" id="drd-01-params">
+                    <div class="MainPanel" id="MainPanel-large">
+                        <div class="row mt-3">
+                            <div class="col SubPanel" id="VoicesPanel-large" aria-labelledby="VoicesPanel">
+                                <div class="voice-radios">
+                                    <h4 class="text-center voice-label">Voices</h4>
+                                            <label class="voice-label synth-param">Voice:</label>
+                                            <input type="radio" id="vButton0" name="voiceRadios" value="voice0" checked>
+                                            <label class="voice-label">1</label>
+                                            <input type="radio" id="vButton1" name="voiceRadios" value="voice1">
+                                            <label class="voice-label">2</label>
+                                            <input type="radio" id="vButton2" name="voiceRadios" value="voice2">
+                                            <label class="voice-label">3</label>
+                                            <input type="radio" id="vButton3" name="voiceRadios" value="voice3">
+                                            <label class="voice-label">4</label>
+                                </div>
+                                <div class="voices" id="voice0">
+                                    <div class="oscillator0">
+                                        <h5 class="text-center voice-label">Oscillator</h5>
+                                        <div>
+                                            <label  class="voice-label synth-param">Shape:</label>
+                                            <select name="waveform0" id="waveform0">
+                                                <option value="sine">sine</option>
+                                                <option value="square">square</option>
+                                                <option value="triangle">triangle</option>
+                                            </select>
+                                            <input type="checkbox" id="osc0Toggle" checked>
+                                                <label class="voice-label">on</label>
+                                            </input>
+                                        </div>
+                                        <div>
+                                            <label  class="voice-label synth-param">Oct: </label>
+                                            <input type="range" id="osc0oct" min="-2" max="2" value="0" step="1"></input>
+                                        </div>
+                                        <label class="voice-label synth-param">Tune: </label>
+                                        <input type="range" id="osc0tune" min="-50" max="50" value="0" step="1"></input>
+                                    </div>
+                                    <div class="filter0">
+                                        <h5 class="text-center voice-label">Filter</h5>
+                                        <div>
+                                            <label class="voice-label synth-param">Type: </label>
+                                            <select name="f0Type" id="f0Type">
+                                                <option value="lowpass">lpf</option>
+                                                <option value="bandpass">bpf</option>
+                                                <option value="highpass">hpf</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label  class="voice-label synth-param">Cutoff: </label>
+                                            <input type="range" id="f0Cutoff" min="0" max="20000" value="1000" step="1"></input>
+                                        </div>
+                                        <div>
+                                            <label  class="voice-label synth-param">Q: </label>
+                                            <input type="range" id="f0Q" min="0" max="10" value="3" step="1"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="voices" id="voice1" hidden>
+                                    <div class="oscillator1">
+                                        <div>
+                                            <h5 class="text-center voice-label">Oscillator</h5>
+                                            <label class="voice-label synth-param">Shape:</label>
+                                            <select name="waveform1" id="waveform1">
+                                                <option value="sine">sine</option>
+                                                <option value="square">square</option>
+                                                <option value="triangle">triangle</option>
+                                            </select>
+                                            <input type="checkbox" id="osc1Toggle" checked>
+                                                <label class="voice-label">on</label>
+                                            </input>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Oct:</label>
+                                            <input type="range" id="osc1oct" min="-2" max="2" value="0" step="1"></input>
+                                        </div>
+                                        <div class="div">
+                                            <label class="voice-label synth-param">Tune: </label>
+                                            <input type="range" id="osc1tune" min="-50" max="50" value="0" step="1"></input>
+                                        </div>
+                                    </div>
+                                    <div class="filter1">
+                                        <h5 class="text-center voice-label">Filter</h5>
+                                        <div>
+                                            <label class="voice-label synth-param">Type: </label>
+                                            <select name="f1Type" id="f1Type">
+                                                <option value="lowpass">lpf</option>
+                                                <option value="bandpass">bpf</option>
+                                                <option value="highpass">hpf</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Cutoff: </label>
+                                            <input type="range" id="f1Cutoff" min="0" max="20000" value="1000" step="1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Q: </label>
+                                            <input type="range" id="f1Q" min="0" max="10" value="3" step="1"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="voices" id="voice2" hidden>
+                                    <div class="oscillator2">
+                                        <h5 class="text-center voice-label">Oscillator</h5>
+                                        <div>
+                                            <label class="voice-label synth-param">Shape:</label>
+                                            <select name="waveform2" id="waveform2">
+                                                <option value="sine">sine</option>
+                                                <option value="square">square</option>
+                                                <option value="triangle">triangle</option>
+                                            </select>
+                                            <input type="checkbox" id="osc2Toggle" checked>
+                                                <label class="voice-label">on</label>
+                                            </input>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Oct: </label>
+                                            <input type="range" id="osc2oct" min="-2" max="2" value="0" step="1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Tune: </label>
+                                            <input type="range" id="osc2tune" min="-50" max="50" value="0" step="1"></input>
+                                        </div>
+                                    </div>
+                                    <div class="filter2">
+                                        <h5 class="text-center voice-label">Filter</h5>
+                                        <div>
+                                            <label class="voice-label synth-param">Type: </labeL>
+                                            <select name="f2Type" id="f2Type">
+                                                <option value="lowpass">lpf</option>
+                                                <option value="bandpass">bpf</option>
+                                                <option value="highpass">hpf</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Cutoff: </label>
+                                            <input type="range" id="f2Cutoff" min="0" max="20000" value="1000" step="1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Q: </label>
+                                            <input type="range" id="f2Q" min="0" max="10" value="3" step="1"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="voices" id="voice3" hidden>
+                                    <div class="oscillator3">
+                                        <div></div>
+                                        <h5 class="text-center voice-label">Oscillator</h5>
+                                        <label class="voice-label synth-param">Shape:</label>
+                                        <select name="waveform3" id="waveform3">
+                                            <option value="sine">sine</option>
+                                            <option value="square">square</option>
+                                            <option value="triangle">triangle</option>
+                                        </select>
+                                        <input type="checkbox" id="osc3Toggle" checked>
+                                            <label class="voice-label">on</label>
+                                        </input>
+                                        <div></div>
+                                        <label class="voice-label synth-param">Oct: </label>
+                                        <input type="range" id="osc3oct" min="-2" max="2" value="0" step="1"></input>
+                                        <div></div>
+                                        <label class="voice-label synth-param">Tune: </label>
+                                        <input type="range" id="osc3tune" min="-50" max="50" value="0" step="1"></input>
+                                    </div>
+                                    <div class="filter3">
+                                        <h5 class="voice-label text-center">Filter</h5>
+                                        <div>
+                                            <label class="voice-label synth-param">Type: </label>
+                                            <select name="f3Type" id="f3Type">
+                                                <option value="lowpass">lpf</option>
+                                                <option value="bandpass">bpf</option>
+                                                <option value="highpass">hpf</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Cutoff: </label>
+                                            <input type="range" id="f3Cutoff" min="0" max="20000" value="1000" step="1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="voice-label synth-param">Q: </label>
+                                            <input type="range" id="f3Q" min="0" max="10" value="3" step="1"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col SubPanel" id = "AmpPanel" aria-labelledby="AmpPanel">
+                                <div class="amplifier">
+                                    <div class="adsr mb-3">
+                                        <h4 class="text-center amp-label">Amplifier</h4>
+                                        <h5 class="text-center amp-label">Envelope</h5>
+                                        <div>
+                                            <label class="amp-label synth-param">Attack: </label>
+                                            <input type="range" id="Attack" min="0" max="1" value=".5" step=".1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="amp-label synth-param">Decay: </label>
+                                            <input type="range" id="Decay" min="0" max="1" value=".2" step=".1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="amp-label synth-param">Sustain: </label>
+                                            <input type="range" id="Sustain" min="0" max="1" value="1" step=".1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="amp-label synth-param">Release: </label>
+                                            <input type="range" id="Release" min="0" max="1" value=".8" step=".1"></input>
+                                        </div>
+                                    </div>
+                                    <div class="main mb-3">
+                                        <h5 class="text-center amp-label">Main</h5>
+                                        <div>
+                                            <label class="amp-label synth-param">Volume: </label>
+                                            <input type="range" id="mainVol" min="-48" max="-6" value="-36" step=".1"></input>
+                                        </div>
+                                        <div>
+                                            <label class="amp-label synth-param">Center:  </label>
+                                            <input type="number" id="centerFreq" min="20" max="22000" value="440">
+                                                <label class="amp-label">Hz</label>
+                                            </input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col SubPanel" id="EffectsPanel" aria-labelledby="EffectsPanel">
+                                <div class="effects">
+                                    <div class="mb-3" id="dly-container">
+                                        <h4 class="text-center fx-label">Effects</h4>
+                                        <div>
+                                            <label class="fx-label synth-param">Delay</label>
+                                            <input type="checkbox" id="delayToggle">
+                                                <label class="fx-label">on</label>
+                                            </input>
+                                        </div>
+                                        <div>
+                                            <label class="fx-label synth-param">Time: </label>
+                                            <input type="range" id="delayTime" min="0" max="1" value="0.4" step=".01"></input>    
+                                        </div>
+                                        <div>
+                                            <label class="fx-label synth-param">FdBack: </label>
+                                            <input type="range" id="delayFeedback" min="0" max="1" value="0.2" step=".01"></input>    
+                                        </div>
+                                        <div>
+                                            <label class="fx-label synth-param">Mix: </label>
+                                            <input type="range" id="delayDryWet" min="0" max="1" value="0.5" step=".01"></input>
+                                        </div>
+                                    </div>
+                                    <div id="rvrb-container">
+                                        <div>
+                                            <label class="fx-label synth-param">Reverb</label>
+                                            <input type="checkbox" id="reverbToggle">
+                                                <label class="fx-label synth-param">on</label>
+                                            </input>
+                                        </div>
+                                        <div>
+                                            <label class="fx-label synth-param">Decay: </label>
+                                            <input type="range" id="reverbTime" min="0.01" max="1" value="0.5" step=".01"></input>
+                                        </div>
+                                        <div>
+                                            <label class="fx-label synth-param">Mix: </label>
+                                            <input type="range" id="reverbDryWet" min="0" max="1" value="0.5" step=".01"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body bg-warning text-light" id="touchstrip-panel">
+                    <div id="touchstrip">
+                        <div id="touchstrip">
+                            <div class="mt-4" id="touchstrip-label0">Touchstrip Synth -
+
+                            </div>
+                            <div id="touchstrip-label1">
+                                Click to play, drag mouse to change pitch
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-5" id="version-link">
+                <small><a href="DRD01.html">mobile version</a></small>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</body>
+<footer>
+    <script src="./static/javascript/DRD-01/drd01.js"></script>
+    <link rel="stylesheet" href="./static/css/DRD-01/DRD-01.css">
+</footer>
+</html>

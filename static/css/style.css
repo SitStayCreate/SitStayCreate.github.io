@@ -121,3 +121,29 @@ body
 {
     max-height: 350px;
 }
+
+/* Nav colors */
+.MayaBlue
+{
+    background-color: #55CDFC;
+}
+.White
+{
+    background-color: #FFFFFF;
+}
+.AmaranthPink
+{
+    background-color: #F7A8B8;
+}
+.Yellow
+{
+    background-color: #FCF434;
+}
+.Purple
+{
+    background-color: #9C59D1;
+}
+.Black
+{
+    background-color: #2C2C2C;
+}

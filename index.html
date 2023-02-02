@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +12,7 @@
         gtag('config', 'UA-194353784-1');
     </script>
 
-    <title>Tone.js with webpack</title>
+    <title>SSC - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -26,468 +24,130 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
-                    <a class="nav-link" href="About.html">About</a>
-                </li>
-                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
                     <a class="nav-link" href="Midiosc.html">midiosc</a>
                 </li>
-                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;max_projects&#39; else &#39;&#39; }}">
-                    <a class="nav-link" href="Max.html">Max projects</a>
+                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
+                    <a class="nav-link" href="Max_Intro.html">Max Intro</a>
+                </li>
+                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;chordophone&#39; else &#39;&#39; }}">
+                    <a class="nav-link" href="Chordophone.html">Chordophone</a>
+                </li>
+                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;diatonicpads&#39; else &#39;&#39; }}">
+                    <a class="nav-link" href="DiatonicPads.html">DiatonicPads</a>
+                </li>
+                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;liveclip&#39; else &#39;&#39; }}">
+                    <a class="nav-link" href="LiveClip.html">LiveClip</a>
+                </li>
+                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;drd01&#39; else &#39;&#39; }}">
+                    <a class="nav-link" href="DRD01.html">DRD-01 Synth</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
             <li class="breadcrumb-item active" aria-current="page">Home</li>
         </ol>
     </nav>
-
-    <div class="mx-5">
-        <h1 class="display-4 text-center">SitStayCreate - <small>DRD-01</small></h1>
+    <!-- TODO: Fix image sizes -->
+    <div class="Home-Section-Container text-center" name="Home-Section-CerealOSC" hidden>
+        <!-- TODO: Image -->
+        <h4>CerealOSC</h4>
+        <p>
+            A java clone of the serialosc server
+        </p>
     </div>
-    <div class="card mx-5">
-        <div class="card-header bg-dark text-light">
-            <div class="row">
-                <div class="col">
-                    <div class="div">
-                        <h4 class="text-center voice-label">Voices</h4>
-                        <div class="row">
-                            <div class="col-3">
-                                <label class="voice-label">Voice:</label>
-                            </div>
-                            <div class="col">
-                                <input type="radio" id="vButton0" name="voiceRadios" value="voice0" checked>
-                                <label class="voice-label">1</label>
-                                <input type="radio" id="vButton1" name="voiceRadios" value="voice1">
-                                <label class="voice-label">2</label>
-                                <input type="radio" id="vButton2" name="voiceRadios" value="voice2">
-                                <label class="voice-label">3</label>
-                                <input type="radio" id="vButton3" name="voiceRadios" value="voice3">
-                                <label class="voice-label">4</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="voices" id="voice0">
-                        <div class="oscillator0">
-                            <h5 class="text-center osc-label">Oscillator</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label  class="osc-label">Shape:</label>
-                                </div>
-                                <div class="col">
-                                    <select name="waveform0" id="waveform0">
-                                        <option value="sine">sine</option>
-                                        <option value="square">square</option>
-                                        <option value="triangle">triangle</option>
-                                    </select>
-                                    <input type="checkbox" id="osc0Toggle" checked>
-                                        <label class="osc-label">on</label>
-                                    </input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label  class="osc-label">Oct: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc0oct" min="-2" max="2" value="0" step="1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Tune: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc0tune" min="-50" max="50" value="0" step="1"></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter0">
-                            <h5 class="text-center filter-label">Filter</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="filter-label">Type: </labeL>
-                                </div>
-                                <div class="col">
-                                    <select name="f0Type" id="f0Type">
-                                        <option value="lowpass">lpf</option>
-                                        <option value="bandpass">bpf</option>
-                                        <option value="highpass">hpf</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label  class="filter-label">Cutoff: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="f0Cutoff" min="0" max="20000" value="1000" step="1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label  class="filter-label">Q: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="f0Q" min="0" max="10" value="3" step="1"></input>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="voices" id="voice1" hidden>
-                        <div class="oscillater1">
-                            <h5 class="text-center osc-label">Oscillator</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Shape:</label>
-                                </div>
-                                <div class="col">
-                                    <select name="waveform1" id="waveform1">
-                                        <option value="sine">sine</option>
-                                        <option value="square">square</option>
-                                        <option value="triangle">triangle</option>
-                                    </select>
-                                    <input type="checkbox" id="osc1Toggle" checked>
-                                        <label class="osc-label">on</label>
-                                    </input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Oct:</label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc1oct" min="-2" max="2" value="0" step="1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Tune: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc1tune" min="-50" max="50" value="0" step="1"></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter1">
-                            <h5 class="text-center filter-label">Filter</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="filter-label">Type: </label>
-                                </div>
-                                <div class="col">
-                                    <select name="f1Type" id="f1Type">
-                                        <option value="lowpass">lpf</option>
-                                        <option value="bandpass">bpf</option>
-                                        <option value="highpass">hpf</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="filter-label">Cutoff: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="f1Cutoff" min="0" max="20000" value="1000" step="1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="filter-label">Q: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="f1Q" min="0" max="10" value="3" step="1"></input>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="voices" id="voice2" hidden>
-                        <div class="oscillator2">
-                            <h5 class="text-center osc-label">Oscillator</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Shape:</label>
-                                </div>
-                                <div class="col">
-                                    <select name="waveform2" id="waveform2">
-                                        <option value="sine">sine</option>
-                                        <option value="square">square</option>
-                                        <option value="triangle">triangle</option>
-                                    </select>
-                                    <input type="checkbox" id="osc2Toggle" checked>
-                                        <label class="osc-label">on</label>
-                                    </input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Oct: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc2oct" min="-2" max="2" value="0" step="1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Tune: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc2tune" min="-50" max="50" value="0" step="1"></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter2">
-                            <h5 class="text-center filter-label">Filter</h5>
-                                <div class="row">
-                                    <div class="col-3">
-                                        <label class="filter-label">Type: </labeL>
-                                    </div>
-                                    <div class="col">
-                                        <select name="f2Type" id="f2Type">
-                                            <option value="lowpass">lpf</option>
-                                            <option value="bandpass">bpf</option>
-                                            <option value="highpass">hpf</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">
-                                        <label class="filter-label">Cutoff: </label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="range" id="f2Cutoff" min="0" max="20000" value="1000" step="1"></input>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">
-                                        <label class="filter-label">Q: </label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="range" id="f2Q" min="0" max="10" value="3" step="1"></input>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="voices" id="voice3" hidden>
-                        <div class="oscillator3">
-                            <h5 class="text-center osc-label">Oscillator</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Shape:</label>
-                                </div>
-                                <div class="col">
-                                    <select name="waveform3" id="waveform3">
-                                        <option value="sine">sine</option>
-                                        <option value="square">square</option>
-                                        <option value="triangle">triangle</option>
-                                    </select>
-                                    <input type="checkbox" id="osc3Toggle" checked>
-                                        <label class="osc-label">on</label>
-                                    </input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Oct: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc3oct" min="-2" max="2" value="0" step="1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="osc-label">Tune: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="osc3tune" min="-50" max="50" value="0" step="1"></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter3">
-                            <h5 class="text-center filter-label">Filter</h5>
-                                <div class="row">
-                                    <div class="col-3">
-                                        <label class="filter-label">Type: </labeL>
-                                    </div>
-                                    <div class="col">
-                                        <select name="f3Type" id="f3Type">
-                                            <option value="lowpass">lpf</option>
-                                            <option value="bandpass">bpf</option>
-                                            <option value="highpass">hpf</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="filter-label">Cutoff: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="f3Cutoff" min="0" max="20000" value="1000" step="1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="filter-label">Q: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="f3Q" min="0" max="10" value="3" step="1"></input>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="amplifier">
-                        <div class="adsr mb-3">
-                            <h4 class="text-center amp-label">Amplifier</h4>
-                            <h5 class="text-center env-label">Envelope</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="env-label">Attack: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="Attack" min="0" max="1" value=".5" step=".1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="env-label">Decay: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="Decay" min="0" max="1" value=".2" step=".1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="env-label">Sustain: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="Sustain" min="0" max="1" value="1" step=".1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="env-label">Release: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="Release" min="0" max="1" value=".8" step=".1"></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main mb-3">
-                            <h5 class=" text-center main-label">Main</h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="main-label">Volume: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="mainVol" min="-48" max="-6" value="-36" step=".1"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="main-label">Center:  </label>
-                                </div>
-                                <div class="col">
-                                    <input type="number" id="centerFreq" min="20" max="22000" value="440">
-                                        <label class="main-label">Hz</label>
-                                    </input>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="effects">
-                        <div class="delay mb-3">
-                            <h4 class="text-center fx-label">Effects</h4>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="dly-label">Delay</label>
-                                </div>
-                                <div class="col">
-                                    <input type="checkbox" id="delayToggle">
-                                        <label class="dly-label">on</label>
-                                    </input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="dly-label">Time: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="delayTime" min="0" max="1" value="0.4" step=".01"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="dly-label">FdBack: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="delayFeedback" min="0" max="1" value="0.2" step=".01"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="dly-label">Mix: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="delayDryWet" min="0" max="1" value="0.5" step=".01"></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reverb">
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="rvrb-label">Reverb</label>
-                                </div>
-                                <div class="col">
-                                    <input type="checkbox" id="reverbToggle">
-                                
-                                        <label class="rvrb-label">on</label>
-                                    </input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="rvrb-label">Decay: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="reverbTime" min="0.01" max="1" value="0.5" step=".01"></input>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="rvrb-label">Mix: </label>
-                                </div>
-                                <div class="col">
-                                    <input type="range" id="reverbDryWet" min="0" max="1" value="0.5" step=".01"></input>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-body bg-warning text-light">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col">
-                    <canvas id="touchstrip" width="600" height="100"></canvas>
-                </div>
-                <div class="col"></div>
-            </div>
-        </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-Midi.2.OSC">
+        <h4>Midi.2.OSC</h4>
+        <a href="Midiosc.html">
+            <img src="./static/images/midiosc/midiosc-ssc.png" 
+            class="home-card-image img-fluid d-block mx-auto">
+        </a>
+        <p>
+            A java adapter for midi grids to communicate with monome grid apps
+        </p>
     </div>
-    <script src="./static/javascript/DRD-01/drd01.js"></script>
-    <link rel="stylesheet" href="./static/css/DRD-01/DRD-01.css">
+    <div class="Home-Section-Container text-center" name="Home-Section-OSC.2.OSC" hidden>
+        <h4>OSC.2.OSC</h4>
+        <!-- TODO: Image -->
+        <p>
+            A java adapter for OSC grids to communicate with monome grid apps
+        </p>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-VirtualGrid" hidden>
+        <h4>VirtualGrid</h4>
+        <!-- TODO: Update when new page created -->
+        <a href="Midiosc.html">
+            <img src="./static/images/midiosc/midiosc-1.1.0(2).png" 
+            class="home-card-image img-fluid d-block mx-auto">
+        </a>
+
+        <p>
+            A basic java implementation of a Virtual Monome grid
+        </p>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-MaxExternals" hidden>
+        <h4>MaxExternals</h4>
+        <!-- TODO: Image -->
+        <p>
+            A suite of Max/MSP externals (Max/MSP objects that extend the Max/MSP 
+            programming language)
+        </p>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-MaxIntro">
+        <h4>MaxIntro</h4>
+        <a href="Max_Intro.html">
+            <img src="./static/images/Max/max_intro.png"
+            class="home-card-image img-fluid d-block mx-auto"> 
+        </a>
+        <p>
+            A brief intro on the Max/MSP programming environment
+        </p>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-DiatonicPads">
+        <h4>DiatonicPads</h4>
+        <a href="DiatonicPads.html">
+            <img src="./static/images/Max/Diatonic-pads.png" 
+            class="home-card-image img-fluid d-block mx-auto">
+        </a>
+        <p>
+            A Max/MSP project to extend a 4x4 pad controller
+        </p>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-Chordophone">
+        <h4>Chordophone</h4>
+        <a href="Chordophone.html">
+            <img src="./static/images/Max/chordophone.png" 
+            class="home-card-image img-fluid d-block mx-auto">
+        </a>
+        <p>
+            A Max/MSP project for the Monome Grid
+        </p>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-LiveClip">
+        <h4>LiveClip</h4>
+        <a href="LiveClip.html">
+            <img src="./static/images/Max/liveclip.png"
+            class="home-card-image img-fluid d-block mx-auto">
+        </a>
+        <p>
+            A Max4Live project for the Monome Grid
+        </p>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-DRD01">
+        <h4>DRD01</h4>
+        <a href="DRD01.html">
+            <img src="./static/images/DRD01/DRD01.png"
+            class="home-card-image img-fluid d-block mx-auto">
+        </a>
+        <p>
+            Touchstrip browser synth - built with tone.js library
+        </p>
+    </div>
 </body>
-</html>
+<footer>
+</footer>
