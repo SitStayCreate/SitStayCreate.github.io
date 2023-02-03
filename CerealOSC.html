@@ -34,6 +34,9 @@
                     <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
                         <a class="nav-link" href="CerealOSC.html">CerealOSC</a>
                     </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="Midi2OSC.html">Midi2OSC</a>
+                    </li>
                     <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
                         <a class="nav-link" href="Max_Intro.html">Max Intro</a>
                     </li>
@@ -65,17 +68,11 @@
                 <h1 class="display-4 text-center">CerealOSC</h1>
             </div>
             <div class="card-body">
-                <div style="padding:62.5% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/572275423?h=5833fc89f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="midiosc1.1.0-demo.mov"></iframe>
-                </div>
-                <h3 class="text-center">A CerealOSC server for midi devices</h3>
+                <h3 class="text-center">A serialosc clone written in Java</h3>
                 <p>
                     This is a hard fork of the serialosc server. We like puns and wordgames here, so we'll call it a soft spoon of CerealOSC.
-                </p>
-                <p>
-                    CerealOSC is a Java Swing app that acts as a bridge between applications designed for grid controllers that communicate over MIDI.
-                    It also provides the ability to create virtual grids that respond to mouse clicks. The goal of CerealOSC is to provide an entry point 
-                    for anyone curious about electronic music or programming to try building their own instrument.
+                    CerealOSC is a Java implementation of the serialosc server. By itself, it doesn't do much. It is intended to be a starting
+                    point for you to build your own apps.
                 </p>
                 <p>
                     Navigate to <a href="https://github.com/SitStayCreate/midiosc">https://github.com/SitStayCreate/midiosc</a> and download the JAR file located
@@ -83,55 +80,40 @@
                     You can find this at <a href="https://www.oracle.com/">Oracle.com</a>
                 </p>
                 <div>
-                    <h3 class="text-center">Introduction</h3>
+                    <h3 class="text-center">What is serialosc?</h3>
                     <p>
-                        Electronic music is very different from many other styles of music. The barrier to entry is mostly financial and anyone can make compelling
-                        music at home. Instead of needing lessons for years as you might with an acoustic instrument, the focus is more on creating short vignettes
-                        and looping them. Pedants might debate me on this and they aren't wrong, but this isn't a website for them. It's a website for everyone else.
-                        Absolute truths are rarely useful when discussing things that are outside of the realm of hard science; approximate truths are sometimes better
-                        in applied sciences and arts. This is to say that practical knowledge often limits the scope in which it is discussed to keep the context manageable.
+                        Serialosc is a daemon server written by the organization Monome. It allows their hardware controllers, like the Monome Grid, to communicate with
+                        open-source apps created by end users. When they first released the Grid in 2007, it represented a leap forward in terms of electronic music. It
+                        was in essence a hardware implementation of a Max/MSP object called a matrixctrl. Whether or not this was the source of their inspiration or a
+                        parallel development is something I do not know. Three attributes made the Grid a unique device. First, the instrument is a minimalist instrument.
+                        The buttons are not pressure sensitive, but instead simply register on/off. This might seem like a regression compared to other instruments focused
+                        on percussive performance, but it makes the controller more akin to a DJ manipulating vinyl. Second, the buttons and lights are decoupled from one
+                        another. This means pressing a button does not light a light and lighting a light does not trigger a button. This may not seem particularly impressive
+                        on its own, however with the third attribute of the Grid it is very powerful. Third, the grid does not do anything on its own out of the box other than
+                        send presses and receive LED data. It is up to the community of Monome Grid users to develop apps for the Grid. This makes it extensible. Hacking MIDI
+                        controllers to extend their functionality has existed for a long time, however, having a controller where the functionality is completely undefined makes
+                        developing apps much more straightforward in terms of creating a predictable result that is possible with many standard MIDI controllers.
                     </p>
-                    <h3 class="text-center">CerealOSC</h3>
+                    <h3 class="text-center">Monome Grid apps</h3>
                     <p>
-                        Grid controllers are usually midi devices that communicate via USB. However, there are other apps that may use other protocols, such as OSC.
-                        OSC (open sound control) was created as an alternative to the MIDI protocol and is instead a network protocol. In order for a midi device
-                        to communicate with these apps, we need a third app to act as a translator or bridge. CerealOSC is designed to act as a bridge for midi controllers
-                        to use OSC based applications.
+                        Monome Grid apps are available as standalone applications written in general purpose programming and scripting languages like Java and Python. They are
+                        also created in audio and video domain specific programming environments like Max/MSP and Puredata. Since the Monome Grid has been around for so long,
+                        there have been many apps released over the years that are available free to use. Some have been abandoned, however, the most popular are maintained
+                        by the open-source community. While Monome's focus seems to have shifted over the years to focus on hardware devices such as the norns or modular
+                        devices (I think they create Eurorack devices), the Grid remains a useful tool for traditional computer musicians.
+                    </p>
+                    <h3 class="text-center">How can I use CerealOSC?</h3>
+                    <p>
+                        I have created two apps using CerealOSC. The first is an app named Midi2OSC. Midi2OSC is an adapter for MIDI controllers to communicate with 
+                        Monome Grid apps. Serialosc takes serial that communicates using UDP messages. UDP is a network protocol that allows you to send messages 
+                        internally using a computer's ports or externally over a network, for instance ethernet or wi-fi. The second is a standalone Java Swing GUI
+                        app named VirtualGrid. This app is a Monome Grid you can control with your mouse.
+                    </p>
+                    <p>
+                        Originally, CerealOSC was a GUI app that served both of these purposes. However, I have decided to release it as a Java module that
+                        can be used as a starting point for you to develop your own apps.
                     </p>
                 </div>
-                <h3 class="text-center">Midi to OSC adapter</h3>
-                <div class="my-3">
-                    <img src="./static/images/midiosc/midiosc-ssc.png" class="home-card-image img-fluid d-block mx-auto">
-                </div>
-                <p>
-                    To create a virtual OSC device, first select your MIDI controller from the dropdown menus in CerealOSC. The MIDI in dropdown menu chooses
-                    the device that will be sending MIDI data to CerealOSC. The MIDI out dropdown menu selects the device that will be receiving MIDI data from
-                    CerealOSC.
-                </p>
-                <p>
-                    Next, select the port you would like CerealOSC to use to receive messages from external apps. Please note, some ports are reserved and may not
-                    be used. Please also note, a port may only be opened by one virtual OSC device.
-                </p>
-                <p>
-                    Finally, select the dimensions for your MIDI controller and click create. You currently can choose from an 8x8 grid or a 16x8 grid. The checkbox
-                    labeled Invert Y-Axis sets the orientation of your controller. Regular orientation in this case is 0-63/127 starting at the top left corner and
-                    ending at the bottom right corner. Inverted orientation, then, starts at the bottom left corner and ends at the top right corner. APC Mini
-                    controllers have inverted orientation, while the Pads object in Lemur has regular orientation, for example.
-                </p>
-                <h3 class="text-center">Virtual grid</h3>
-                <div class="my-3">
-                    <img src="./static/images/midiosc/midiosc-1.1.0(2).png" class="home-card-image img-fluid d-block mx-auto">
-                </div>
-                <p>
-                    As of CerealOSC 1.1.0, you also can create a virtual grid if you don't have a midi controller and still want to build your own app.
-                    This was something we built to prototype apps on different machines and for others to be able to collaborate without investing in hardware.
-                    The short demo video at the top of this page is using this feature with an app named Meadowphysics for Max 7.
-                </p>
-                <p>
-                    This is to say, at the moment, this is as far as we plan on going with this project. We have released the source code under a GPL3 license, so feel free to modify
-                    it yourself. Also, lastly, I want to thank everyone who has worked on the JavaOSC library (Illposed, hoijui, etc).
-                    This library is well-designed, well-maintained, and easy to use.
-                </p>
             </div>
         </div>
     </body>

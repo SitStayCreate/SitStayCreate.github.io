@@ -30,6 +30,9 @@
                 <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
                     <a class="nav-link" href="CerealOSC.html">CerealOSC</a>
                 </li>
+                <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                    <a class="nav-link" href="Midi2OSC.html">Midi2OSC</a>
+                </li>
                 <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
                     <a class="nav-link" href="Max_Intro.html">Max Intro</a>
                 </li>
@@ -55,16 +58,18 @@
         </ol>
     </nav>
     <!-- TODO: Fix image sizes -->
-    <div class="Home-Section-Container text-center" name="Home-Section-CerealOSC" hidden>
+    <div class="Home-Section-Container text-center" name="Home-Section-CerealOSC">
         <!-- TODO: Image -->
         <h4>CerealOSC</h4>
-        <p>
-            A java clone of the serialosc server
-        </p>
-    </div>
-    <div class="Home-Section-Container text-center" name="Home-Section-Midi.2.OSC">
-        <h4>Midi.2.OSC</h4>
         <a href="CerealOSC.html">
+            <p>
+                A java clone of the serialosc server
+            </p>
+        </a>
+    </div>
+    <div class="Home-Section-Container text-center" name="Home-Section-Midi2OSC">
+        <h4>Midi2OSC</h4>
+        <a href="Midi2OSC.html">
             <img src="./static/images/midiosc/midiosc-ssc.png" 
             class="home-card-image img-fluid d-block mx-auto">
         </a>
@@ -72,8 +77,8 @@
             A java adapter for midi grids to communicate with monome grid apps
         </p>
     </div>
-    <div class="Home-Section-Container text-center" name="Home-Section-OSC.2.OSC" hidden>
-        <h4>OSC.2.OSC</h4>
+    <div class="Home-Section-Container text-center" name="Home-Section-OSC2OSC" hidden>
+        <h4>OSC2OSC</h4>
         <!-- TODO: Image -->
         <p>
             A java adapter for OSC grids to communicate with monome grid apps
