@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>CerealOSC</title>
+        <title>VirtualGrid</title>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194353784-1"></script>
@@ -37,6 +37,9 @@
                     <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
                         <a class="nav-link" href="Midi2OSC.html">Midi2OSC</a>
                     </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="VirtualGrid.html">VirtualGrid</a>
+                    </li>
                     <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
                         <a class="nav-link" href="Max_Intro.html">Max Intro</a>
                     </li>
@@ -60,81 +63,40 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-white">
                 <li class="breadcrumb-item" aria-current="page"><a href="https://sitstaycreate.github.io/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">CerealOSC</li>
+                <li class="breadcrumb-item active" aria-current="page">VirtualGrid</li>
             </ol>
         </nav>
         <div class="card mx-5 mb-5 justify-content-center">
             <div class="card-header bg-dark text-light">
-                <h1 class="display-4 text-center">CerealOSC</h1>
+                <h1 class="display-4 text-center">VirtualGrid</h1>
             </div>
             <div class="card-body">
                 <div style="padding:62.5% 0 0 0;position:relative;">
                     <iframe src="https://player.vimeo.com/video/572275423?h=5833fc89f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="midiosc1.1.0-demo.mov"></iframe>
                 </div>
-                <h3 class="text-center">A CerealOSC server for midi devices</h3>
+                <h3 class="text-center">VirtualGrid</h3>
                 <p>
-                    This is a hard fork of the serialosc server. We like puns and wordgames here, so we'll call it a soft spoon of CerealOSC.
+                    VirtualGrid is a Java app that emulates a Monome Grid. It includes CerealOSC, so does not require manual configuration of virtual devices.
+                    One major limitation of this app is it does not support multitouch. The original intent of this app was for debugging of CerealOSC as well 
+                    as prototyping Monome Grid applications. The native Java GUI libraries Swing and JSwing do not support multitouch. JavaFX supports multitouch,
+                    so it is possible to extend this functionality, however, I have no plans to do so at this time.
                 </p>
                 <p>
-                    CerealOSC is a Java Swing app that acts as a bridge between applications designed for grid controllers that communicate over MIDI.
-                    It also provides the ability to create virtual grids that respond to mouse clicks. The goal of CerealOSC is to provide an entry point 
-                    for anyone curious about electronic music or programming to try building their own instrument.
-                </p>
-                <p>
-                    Navigate to <a href="https://github.com/SitStayCreate/midiosc">https://github.com/SitStayCreate/midiosc</a> and download the JAR file located
-                    there. CerealOSC is a Java application that requires Java 8 to run. Please download the JRE if you do not already have it installed on your machine.
+                    Navigate to <a href="https://github.com/SitStayCreate/VirtualGrid">https://github.com/SitStayCreate/VirtualGrid</a> and download the JAR file located
+                    there. VirtualGrid is a Java application that requires Java 8 to run. Please download the JRE if you do not already have it installed on your machine.
                     You can find this at <a href="https://www.oracle.com/">Oracle.com</a>
                 </p>
-                <div>
-                    <h3 class="text-center">Introduction</h3>
-                    <p>
-                        Electronic music is very different from many other styles of music. The barrier to entry is mostly financial and anyone can make compelling
-                        music at home. Instead of needing lessons for years as you might with an acoustic instrument, the focus is more on creating short vignettes
-                        and looping them. Pedants might debate me on this and they aren't wrong, but this isn't a website for them. It's a website for everyone else.
-                        Absolute truths are rarely useful when discussing things that are outside of the realm of hard science; approximate truths are sometimes better
-                        in applied sciences and arts. This is to say that practical knowledge often limits the scope in which it is discussed to keep the context manageable.
-                    </p>
-                    <h3 class="text-center">CerealOSC</h3>
-                    <p>
-                        Grid controllers are usually midi devices that communicate via USB. However, there are other apps that may use other protocols, such as OSC.
-                        OSC (open sound control) was created as an alternative to the MIDI protocol and is instead a network protocol. In order for a midi device
-                        to communicate with these apps, we need a third app to act as a translator or bridge. CerealOSC is designed to act as a bridge for midi controllers
-                        to use OSC based applications.
-                    </p>
-                </div>
-                <h3 class="text-center">Midi to OSC adapter</h3>
-                <div class="my-3">
-                    <img src="./static/images/midiosc/midiosc-ssc.png" class="home-card-image img-fluid d-block mx-auto">
-                </div>
-                <p>
-                    To create a virtual OSC device, first select your MIDI controller from the dropdown menus in CerealOSC. The MIDI in dropdown menu chooses
-                    the device that will be sending MIDI data to CerealOSC. The MIDI out dropdown menu selects the device that will be receiving MIDI data from
-                    CerealOSC.
-                </p>
-                <p>
-                    Next, select the port you would like CerealOSC to use to receive messages from external apps. Please note, some ports are reserved and may not
-                    be used. Please also note, a port may only be opened by one virtual OSC device.
-                </p>
-                <p>
-                    Finally, select the dimensions for your MIDI controller and click create. You currently can choose from an 8x8 grid or a 16x8 grid. The checkbox
-                    labeled Invert Y-Axis sets the orientation of your controller. Regular orientation in this case is 0-63/127 starting at the top left corner and
-                    ending at the bottom right corner. Inverted orientation, then, starts at the bottom left corner and ends at the top right corner. APC Mini
-                    controllers have inverted orientation, while the Pads object in Lemur has regular orientation, for example.
-                </p>
-                <h3 class="text-center">Virtual grid</h3>
                 <div class="my-3">
                     <img src="./static/images/midiosc/midiosc-1.1.0(2).png" class="home-card-image img-fluid d-block mx-auto">
                 </div>
-                <p>
-                    As of CerealOSC 1.1.0, you also can create a virtual grid if you don't have a midi controller and still want to build your own app.
-                    This was something we built to prototype apps on different machines and for others to be able to collaborate without investing in hardware.
-                    The short demo video at the top of this page is using this feature with an app named Meadowphysics for Max 7.
-                </p>
-                <p>
-                    This is to say, at the moment, this is as far as we plan on going with this project. We have released the source code under a GPL3 license, so feel free to modify
-                    it yourself. Also, lastly, I want to thank everyone who has worked on the JavaOSC library (Illposed, hoijui, etc).
-                    This library is well-designed, well-maintained, and easy to use.
-                </p>
+                <div>
+                    <h3 class="text-center">Virtual Grid Instructions</h3>
+                    <p>
+                        Select a port number for your VirtualGrid and press create. The VirtualGrid will
+                        be added to the table at the bottom of the GUI and a new window will open. Clicking
+                        the x next to the device in the table will delete the VirtualGrid. 
+                    </p>
+                </div>
             </div>
         </div>
     </body>
