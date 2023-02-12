@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>LiveClip</title>
+        
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194353784-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-194353784-1');
+        </script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./static/css/style.css">
+        <title>SitStayCreate</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="https://sitstaycreate.github.io/">SitStayCreate</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="CerealOSC.html">CerealOSC</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="Midi2OSC.html">Midi2OSC</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;about&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="VirtualGrid.html">VirtualGrid</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;midiosc&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="Max_Intro.html">Max Intro</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;chordophone&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="Chordophone.html">Chordophone</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;diatonicpads&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="DiatonicPads.html">DiatonicPads</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;liveclip&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="LiveClip.html">LiveClip</a>
+                    </li>
+                    <li class="nav-item {{ &#39;active&#39; if active_page == &#39;drd01&#39; else &#39;&#39; }}">
+                        <a class="nav-link" href="DRD01.html">DRD-01 Synth</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item" aria-current="page"><a href="https://sitstaycreate.github.io/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">LiveClip</li>
+            </ol>
+        </nav>
+        <div class="project-title">
+            <h1 class="text-center">LiveClip</h1>
+        </div>
+        <div class="project-description">
+            <h3 class="text-center">Intro</h3>
+            <p>
+                This Max project is a Max for Live device. Max for Live is an add on for the Ableton Live music production environment.
+                Ableton Live is the brainchild of Monolake's Robert Henke. It can serve many purposes from digital audio workstation (DAW)
+                to electronic ensemble to audio effects bank. The software is designed to offer a musician the flexibility to define its
+                use. This approach to design pairs well with a programming language like Max/MSP. There is even an API called the Live Object
+                Model (LOM) accessible via a suite of provided Max objects and JavaScript.
+            </p>
+            <p>
+                LiveClip allows a Grid to edit midi notes in a midi clip stored inside of Ableton. It was designed with Ableton
+                Live 9, but probably will work with newer versions of live. The API calls are all in a JavaScript file, so should be easy
+                to hack if it's not working for you. If you look at the LOM you'll see that there are some now deprecated methods for editing
+                the notes used in the project.
+            </p>
+            <p>
+                This patch is to be used with a Grid, specifically one with 128 buttons oriented horizontally. If you do
+                not have a Grid, our app midiosc will allow you to use this patch with a Midi controller or
+                with your mouse with CerealOSC v1.1.0.
+            </p>
+            <div class="my-3">
+                <img src="./static/images/LiveClip/liveclip.png" class="home-card-image img-fluid d-block mx-auto">
+            </div>
+            <h3 class="text-center">Instructions</h3>
+            <p>
+                LiveClip is an X0X style 16 step sequencer. It takes an Ableton Live Clip and uses it as storage for the sequencer. It will load seven
+                target notes from a highlighted clip and will display them on the grid as lit buttons.
+            </p>
+            <h5 class="text-center">Note Mode</h5>
+            <div class="my-3">
+                <img src="./static/images/LiveClip/notemode.png" class="home-card-image img-fluid d-block mx-auto">
+            </div>
+            <p>
+                The default mode is note mode. Buttons [0 0] - [15 0] display the playhead of the clip as a blinking light. Pressing one of these buttons
+                will change the mode from Note mode to Velo mode. More on this in the next section. Buttons [0 1] - [15 7] edit the notes in the highlighted
+                clip. The notes that it selects and edits can be set from the UI in the patch.
+            </p>
+            <h5 class="text-center">Velo Mode</h5>
+            <div class="my-3">
+                <img src="./static/images/LiveClip/velomode.png" class="home-card-image img-fluid d-block mx-auto">
+            </div>
+            <p>
+                Once in velo mode the blinking light will disappear, the selected column will be lit and the selected velocity will be brightly lit.
+                Pressing a button will change the velocity of the notes in the grid and assign a value of 0-127 where notes descend from the top left
+                note [0 0] - [15 7]. Velocities are set for entire columns (one per step).
+            </p>
+            <p>
+                The repo for liveclip can be found here: <a href="https://github.com/SitStayCreate/LiveClip">https://github.com/SitStayCreate/LiveClip</a>.
+            </p>
+        </div>
+    </body>
+</html>
