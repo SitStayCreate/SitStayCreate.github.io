@@ -5,6 +5,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.project-description
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .base-footer
 {
     max-height: 75px;
