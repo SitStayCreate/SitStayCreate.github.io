@@ -45,3 +45,61 @@
 {
     font-size: 24px;
 }
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  .nav-bar-list-item {
+    float: left;
+  }
+
+  .nav-bar-list-logo {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+  }
+
+  .nav-bar-list-logo:hover {
+    color:#FFFFFF;
+    text-decoration:none;
+  }
+  
+  .nav-bar-list-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+  }
+
+  .nav-bar-active {
+    color:#FFFFFF;
+    background-color: #111111;
+    text-decoration:none;
+  }
+
+  .nav-bar-active:hover {
+    color:#FFFFFF;
+    text-decoration:none;
+  }
+  
+  .nav-bar-list-link:hover {
+    color:#FFFFFF;
+    background-color: #111111;
+    text-decoration:none;
+  }
+

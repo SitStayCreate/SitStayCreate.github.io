@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Max Intro</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./static/css/style.css">
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </head>
+    <body>
+        
+
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-bar-list-item">
+                    <a class="nav-bar-list-logo" href="index.html">SitStayCreate</a>
+                </li>
+                <li class="nav-bar-list-item">
+                    <a class="nav-bar-list-link nav-bar-active" href="Max_Intro.html">Max Intro</a>
+                </li>
+                <li class="nav-bar-list-item">
+                    <a class="nav-bar-list-link" href="Chordophone.html">Chordophone</a>
+                </li>
+                <li class="nav-bar-list-item">
+                    <a class="nav-bar-list-link" href="DiatonicPads.html">DiatonicPads</a>
+                </li>
+                <li class="nav-bar-list-item">
+                    <a class="nav-bar-list-link" href="LiveClip.html">LiveClip</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="https://sitstaycreate.github.io/">SitStayCreate</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Max_Intro.html">Max Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Chordophone.html">Chordophone</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DiatonicPads.html">DiatonicPads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LiveClip.html">LiveClip</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
+
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white bread-crumb-font-size">
+                <li class="breadcrumb-item" aria-current="page"><a href="www.sitstaycreate.com">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Max Intro</li>
+            </ol>
+        </nav>
+        <div class="project">
+            <div class="project-title">
+                <h4 class="display-4 text-center">Max/MSP</h4>
+            </div>
+            <div class="project-description">
+                <div class="tutorial-text-size">
+                    <p>
+                        What is Max/MSP? Max/MSP is a visual programming language for processing audio and video. It might be somewhat confusing
+                        for the average person to grok at first since it is is best known as tool for artists working in niche domains like noise or glitch art.
+                        The easiest way to get an idea of what it does is to start with a video. This is a demonstration of maybe one of the
+                        simplest configurations of what meets the definition of a subtractive synth.
+                    </p>
+                    <div class="mx-5 my-3">
+                        <div style="padding:50.00% 0 0 0;position:relative;">
+                            <iframe src="https://player.vimeo.com/video/559254565?h=4a5f75f5e2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Max 7 - minimum_viable_patch"></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        As you may have guessed, Max 7 is a bit more than a programming language. It’s probably better to think of it as a
+                        programming environment. It has elements of an IDE, elements of a wysiwyg GUI editor, and elements of a library. You can
+                        design programs with it using predefined building blocks with a graphical drag and drop approach that feels similar to making
+                        diagrams in Visio. This is probably the way most people get started with it. It also supports scripting with
+                        JavaScript, albeit with some limitations, and you can even build your own extensions using Java and C/C++.
+                    </p>
+                    <p>
+                        The individual blocks in the video are called objects and process the signal flowing through them. This can either be a data
+                        type (numeric, string, etc.) or audio signal. The ability to use Max to do regular computer-sciency stuff (event scheduling,
+                        operators, control flow etc.) combined with its ability to simplify DSP to where it's in reach for the average musician make
+                        a formidable combination for building a variety of tools.
+                    </p>
+
+                    <p>
+                        In older versions of Max, there was the programming environment and the runtime environment. In newer versions, these are both
+                        the same thing, but there are limitations on saving and exporting patches like there were on the programming environment.
+                        Although the programming environment requires a license, for saving or exporting patches, the runtime is free to use with already
+                        existing patches. To get started, visit Cycling 74’s website and download a copy. Once you have installed it, you can open files
+                        with the .maxpat extension. You can find many premade patches on their forum. There is a world full of incredible musical
+                        instruments ready for you to use, the only barrier to entry is your willingness to learn computer science.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
