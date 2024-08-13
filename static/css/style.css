@@ -2,7 +2,7 @@
 
 .project
 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';    
 }
 
 .project-description
@@ -77,7 +77,7 @@
   
   .nav-bar-list-link {
     display: block;
-    color: white;
+    color: darkgrey;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -88,7 +88,6 @@
 
   .nav-bar-active {
     color:#FFFFFF;
-    background-color: #111111;
     text-decoration:none;
   }
 
@@ -99,7 +98,6 @@
   
   .nav-bar-list-link:hover {
     color:#FFFFFF;
-    background-color: #111111;
     text-decoration:none;
   }
 
