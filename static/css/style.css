@@ -70,6 +70,16 @@
     text-decoration: none;
   }
 
+  .hamburger-button {
+    width: 36px;
+    height: 36px;
+    margin-top:12px;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: 333333;
+    border: 1px solid white;
+  }
+
   .nav-bar-list-logo:hover {
     color:#FFFFFF;
     text-decoration:none;
@@ -100,4 +110,3 @@
     color:#FFFFFF;
     text-decoration:none;
   }
-
