@@ -125,9 +125,8 @@
     background-color: #333333;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-decoration: none;
+    padding-left: 16px;
+    text-decoration: none !important;
     border-color: #333333;
   }
 
