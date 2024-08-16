@@ -76,7 +76,7 @@
     margin-top:12px;
     margin-left: 16px;
     margin-right: 16px;
-    background-color: 333333;
+    background-color: darkgray;
     border: 1px solid white;
   }
 
@@ -107,6 +107,31 @@
   }
   
   .nav-bar-list-link:hover {
+    color:#FFFFFF;
+    text-decoration:none;
+  }
+
+  .nav-bar-drop-down-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+
+  .nav-bar-drop-down-menu-item {
+    display: block;
+    color: darkgrey;
+    background-color: #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    border-color: #333333;
+  }
+
+  .nav-bar-drop-down-menu-item-active {
     color:#FFFFFF;
     text-decoration:none;
   }
