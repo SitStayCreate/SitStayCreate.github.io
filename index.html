@@ -11,12 +11,12 @@
 </head>
 <body>
     <nav>
-        <ul class="nav-bar">
+        <ul class="nav-bar" id="list-container">
             <li class="nav-bar-list-item">
                 <a class="nav-bar-list-logo" href="/">SitStayCreate</a>
             </li>
             <li class="nav-bar-list-item">
-                <a class="nav-bar-list-link" href="Max_Intro.html">Max Intro</a>
+                <a class="nav-bar-list-link nav-bar-active" href="Max_Intro.html">Max Intro</a>
             </li>
             <li class="nav-bar-list-item">
                 <a class="nav-bar-list-link" href="Chordophone.html">Chordophone</a>
@@ -28,7 +28,33 @@
                 <a class="nav-bar-list-link" href="LiveClip.html">LiveClip</a>
             </li>
         </ul>
+        <ul class="nav-bar" id="button-container">
+                <li class="nav-bar-list-item">
+                    <canvas id="myCanvas" class="hamburger-button">
+                    </canvas>
+                </li>
+            <li class="nav-bar-list-item">
+                <a class="nav-bar-list-logo" href="/">SitStayCreate</a>
+            </li>
+        </ul>
     </nav>
+    <div class="nav-bar-drop-down" id="nav-bar-drop-down" hidden>
+        <a class="nav-bar-drop-down-menu-item" href="Max_Intro.html">Max Intro</a>
+        <a class="nav-bar-drop-down-menu-item" href="Chordophone.html">Chordophone</a>
+        <a class="nav-bar-drop-down-menu-item nav-bar-drop-down-menu-item-active" href="DiatonicPads.html">DiatonicPads</a>
+        <a class="nav-bar-drop-down-menu-item" href="LiveClip.html">LiveClip</a>
+    </div>
+    <script>
+        var listContainer = document.getElementById("list-container");
+        var buttonContainer = document.getElementById("button-container");
+        if(window.screen.availWidth < 600){
+            console.log("show button container")
+            listContainer.hidden = "true";
+        } else {
+            console.log("show list container")
+            buttonContainer.hidden="true";
+        }
+    </script>
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white bread-crumb-font-size">
@@ -85,6 +111,5 @@
             </p>
         </div>
     </div>
+    <script src="resize.js"></script>
 </body>
-<footer>
-</footer>
