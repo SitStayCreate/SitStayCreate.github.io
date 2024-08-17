@@ -45,17 +45,6 @@
             <a class="nav-bar-drop-down-menu-item" href="DiatonicPads.html">DiatonicPads</a>
             <a class="nav-bar-drop-down-menu-item" href="LiveClip.html">LiveClip</a>
         </div>
-        <script>
-            var listContainer = document.getElementById("list-container");
-            var buttonContainer = document.getElementById("button-container");
-            if(window.screen.availWidth < 600){
-                console.log("show button container")
-                listContainer.hidden = "true";
-            } else {
-                console.log("show list container")
-                buttonContainer.hidden="true";
-            }
-        </script>
         
         <div class="project">
             <div class="project-title">
@@ -100,5 +89,6 @@
             </div>
         </div>
     </body>
-    <script src="resize.js"></script>
+    <script src="resizeNavbar.js"></script>
+    <script src="navbarToggle.js"></script>
 </html>
