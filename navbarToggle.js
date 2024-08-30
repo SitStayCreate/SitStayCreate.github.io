@@ -1,18 +1,21 @@
 var canvas = document.getElementById('myCanvas');
-var dropdown = document.getElementById('nav-bar-drop-down');
+var curtainMenu = document.getElementById('curtain-menu');
+var boolOpen = false;
 canvas.addEventListener('click', function(event) {display()});
-closedMenu();
+styleCanvas();
 
 function display(){
-    if(dropdown.hidden){
-        dropdown.hidden = false;
+    if(boolOpen){
+        closeNav();
+        boolOpen = false;
     } else {
-        dropdown.hidden = true;
+        openNav();
+        boolOpen = true;
     }
 };
 
 
-function closedMenu(){
+function styleCanvas(){
     var ctx = canvas.getContext("2d");
     ctx.strokeStyle = "#ffffff";
     ctx.lineWidth = 20;
@@ -29,26 +32,12 @@ function closedMenu(){
     ctx.stroke();
 }
 
-// Might not use this
-function openMenu(){
-    var ctx = canvas.getContext("2d");
-    ctx.strokeStyle = "#ffffff";
-    ctx.lineWidth = 20;
-    ctx.moveTo(canvas.width*.2,0);
-    ctx.lineTo(canvas.width*.2,canvas.height);
-    ctx.stroke();
-    
-    ctx.moveTo(canvas.width*.5,0);
-    ctx.lineTo(canvas.width*.5,canvas.height);
-    ctx.stroke();
-    
-    ctx.moveTo(canvas.width*.8,0);
-    ctx.lineTo(canvas.width*.8,canvas.height);
-    ctx.stroke();
-}
-
-// Not working
-function clearCanvas(){
-    var ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
+/* Open when someone clicks on the span element */
+function openNav() {
+    curtainMenu.style.width = "100%";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    curtainMenu.style.width = "0%";
+  }

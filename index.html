@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/curtain_menu.css">
 </head>
 <body>
     <nav>
@@ -38,11 +39,14 @@
             </li>
         </ul>
     </nav>
-    <div class="nav-bar-drop-down" id="nav-bar-drop-down" hidden>
-        <a class="nav-bar-drop-down-menu-item" href="Max_Intro.html">Max Intro</a>
-        <a class="nav-bar-drop-down-menu-item" href="Chordophone.html">Chordophone</a>
-        <a class="nav-bar-drop-down-menu-item" href="DiatonicPads.html">DiatonicPads</a>
-        <a class="nav-bar-drop-down-menu-item" href="LiveClip.html">LiveClip</a>
+    <div id="curtain-menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a class="nav-bar-drop-down-menu-item" href="Max_Intro.html">Max Intro</a>
+            <a class="nav-bar-drop-down-menu-item" href="Chordophone.html">Chordophone</a>
+            <a class="nav-bar-drop-down-menu-item" href="DiatonicPads.html">DiatonicPads</a>
+            <a class="nav-bar-drop-down-menu-item" href="LiveClip.html">LiveClip</a>
+        </div>
     </div>
 
     <div class="home">
