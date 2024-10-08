@@ -27,14 +27,14 @@
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: white;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
   }
   
   /* When you mouse over the navigation links, change their color */
   .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: black;
   }
   
   /* Position the close button (top right corner) */
@@ -53,4 +53,6 @@
       top: 15px;
       right: 35px;
     }
-  } 
+  }
+
+  /* Attribution: Based on a W3Schools tutorial https://www.w3schools.com/howto/howto_js_curtain_menu.asp */

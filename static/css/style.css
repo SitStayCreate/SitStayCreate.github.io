@@ -59,7 +59,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    background-color: #009900;
   }
   
   .nav-bar-list-item {
@@ -84,18 +84,18 @@
     margin-top:12px;
     margin-left: 16px;
     margin-right: 16px;
-    background-color: #333333;
-    color: darkgray;
+    background-color: #009900;
+    color: rgb(11, 65, 11);
   }
 
   .nav-bar-list-logo:hover {
-    color:#FFFFFF;
+    color:#333333;
     text-decoration:none;
   }
   
   .nav-bar-list-link {
     display: block;
-    color: darkgrey;
+    color: white;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -105,17 +105,17 @@
   }
 
   .nav-bar-active {
-    color:#FFFFFF;
+    color:#333333;
     text-decoration:none;
   }
 
   .nav-bar-active:hover {
-    color:#FFFFFF;
+    color:#333333;
     text-decoration:none;
   }
   
   .nav-bar-list-link:hover {
-    color:#FFFFFF;
+    color:#333333;
     text-decoration:none;
   }
 
@@ -124,21 +124,21 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    background-color: #009900;
   }
 
   .nav-bar-drop-down-menu-item {
     display: block;
-    color: darkgrey;
-    background-color: #333333;
+    color: rgb(44, 63, 41);
+    background-color: #009900;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 16px;
     text-decoration: none !important;
-    border-color: #333333;
+    border-color: #009900;
   }
 
   .nav-bar-drop-down-menu-item-active {
-    color:#FFFFFF;
+    color:#333333;
     text-decoration:none;
   }
