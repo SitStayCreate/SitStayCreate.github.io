@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>SSC - Projects</title>
+        <title>SSC - DIY blog</title>
     
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,10 +17,10 @@
                     <a class="nav-bar-list-logo" href="/">SitStayCreate</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link nav-bar-active" href="ProjectIndex.html">Open-Source projects</a>
+                    <a class="nav-bar-list-link" href="ProjectIndex.html">Open-Source projects</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="BlogIndex.html">DIY Blog</a>
+                    <a class="nav-bar-list-link nav-bar-active" href="BlogIndex.html">DIY Blog</a>
                 </li>
             </ul>
             <ul class="nav-bar" id="button-container">
@@ -42,42 +42,28 @@
         </div>
         <div class="project">
             <div class="project-title">
-                <h1 class="display-4 text-center">Chordophone</h1>
+                <h1 class="display-4 text-center">DIY Blog</h1>
             </div>
             <div class="project-description tutorial-text-size">
-                <div class="my-3">
-                    <img src="./images/Chordophone/chordophone.png" class="home-card-image img-fluid d-block mx-auto">
-                </div>
                 <p>
-                    This patch is to be used with a Grid controller, specifically one with 128 buttons oriented horizontally.
+                    Blog posts and tutorials on DIY projects.
                 </p>
-                <p>
-                    A chordophone is in the simplest sense, a stringed instrument. Guitars, zithers, harps, lutes, etc. are all examples
-                    of chordophones. This patch aspires to provide a similar feel to using a dulcimer and an autoharp, but maybe lands
-                    somewhere closer to a chord organ.
-                </p>
-                <div class="my-3">
-                    <img src="./images/Chordophone/grid.png" class="home-card-image img-fluid d-block mx-auto">
-                </div>
-                <p>
-                    The top row provides global functionality and tunes the two instruments to a note (buttons [0 0]-[11 0] A-G#) and
-                    either the Ionian, Aeolian, or Dorian mode (buttons [12 0]-[14 0]). 
-                </p>
-                <p>
-                    The instrument will also allow you to switch
-                    between two selected modes by toggling button [15 0]. This will give you the flexibility to change keys on the fly
-                    during a performance.
-                </p>
-                <p>
-                    The left half of the bottom seven rows will trigger triads. The right half of the bottom seven rows will trigger individual notes.
-                    Up one row is up an octave, over one column is up a scale degree.
-                </p>
-                <p>
-                    The repo for chordophone can be found here: <a href="https://github.com/SitStayCreate/Chordophone">https://github.com/SitStayCreate/Chordophone</a>.
-                </p>
-                <p>
-                    Special thanks to Derek Cohen for his guidance on this project.
-                </p>
+                <table>
+                    <tr class="blog-table-content">
+                        <th class="blog-table-content">Date</th>
+                        <th class="blog-table-content">Link</th>
+                    </tr>
+                    <tr class="blog-table-content">
+                        <td class="blog-table-content">
+                            Oct 24, 2024
+                        </td>
+                        <td class="blog-table-content">
+                            <a href="./PedalTrain.html">
+                                Building a shelf for a PedalTrain Classic 2
+                            </a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </body>

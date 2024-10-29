@@ -1,14 +1,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>DiatonicPads</title>
-
+        <title>SSC - Projects</title>
+    
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./static/css/style.css">
-        <link rel="stylesheet" href="./static/css/curtain_menu.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/curtain_menu.css">
     </head>
     <body>
         <nav>
@@ -17,16 +17,10 @@
                     <a class="nav-bar-list-logo" href="/">SitStayCreate</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="Max_Intro.html">Max Intro</a>
+                    <a class="nav-bar-list-link nav-bar-active" href="ProjectIndex.html">Open-Source projects</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="Chordophone.html">Chordophone</a>
-                </li>
-                <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link nav-bar-active" href="DiatonicPads.html">DiatonicPads</a>
-                </li>
-                <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="LiveClip.html">LiveClip</a>
+                    <a class="nav-bar-list-link" href="BlogIndex.html">DIY Blog</a>
                 </li>
             </ul>
             <ul class="nav-bar" id="button-container">
@@ -42,20 +36,17 @@
         <div id="curtain-menu" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-                <a class="nav-bar-drop-down-menu-item" href="Max_Intro.html">Max Intro</a>
-                <a class="nav-bar-drop-down-menu-item" href="Chordophone.html">Chordophone</a>
-                <a class="nav-bar-drop-down-menu-item" href="DiatonicPads.html">DiatonicPads</a>
-                <a class="nav-bar-drop-down-menu-item" href="LiveClip.html">LiveClip</a>
+                <a class="nav-bar-drop-down-menu-item" href="ProjectIndex.html">Open-Source Projects</a>
+                <a class="nav-bar-drop-down-menu-item" href="BlogIndex.html">DIY Blog</a>
             </div>
         </div>
-
         <div class="project">
             <div class="project-title">
                 <h1 class="display-4 text-center">Diatonic pads</h1>
             </div>
             <div class="project-description tutorial-text-size">
                 <div class="my-3">
-                    <img src="./static/images/DiatonicPads/Diatonic-pads.png" class="img-fluid d-block mx-auto">
+                    <img src="./images/DiatonicPads/Diatonic-pads.png" class="img-fluid d-block mx-auto">
                 </div>
                 <p>
                     This project is a Max/MSP patch that extends the functionality of a velocity sensitive 4x4 pad controller as a melodic instrument. It should work with any 4x4 MIDI
@@ -79,6 +70,8 @@
             </div>
         </div>
     </body>
-    <script src="resizeNavbar.js"></script>
-    <script src="navbarToggle.js"></script>
+    <footer>
+        <script src="./javascript/resizeNavbar.js"></script>
+        <script src="./javascript/navbarToggle.js"></script>
+    </footer>
 </html>

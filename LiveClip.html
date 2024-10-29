@@ -1,14 +1,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>LiveClip</title>
-
+        <title>SSC - Projects</title>
+    
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./static/css/style.css">
-        <link rel="stylesheet" href="./static/css/curtain_menu.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/curtain_menu.css">
     </head>
     <body>
         <nav>
@@ -17,16 +17,10 @@
                     <a class="nav-bar-list-logo" href="/">SitStayCreate</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="Max_Intro.html">Max Intro</a>
+                    <a class="nav-bar-list-link nav-bar-active" href="ProjectIndex.html">Open-Source projects</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="Chordophone.html">Chordophone</a>
-                </li>
-                <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="DiatonicPads.html">DiatonicPads</a>
-                </li>
-                <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link nav-bar-active" href="LiveClip.html">LiveClip</a>
+                    <a class="nav-bar-list-link" href="BlogIndex.html">DIY Blog</a>
                 </li>
             </ul>
             <ul class="nav-bar" id="button-container">
@@ -42,20 +36,17 @@
         <div id="curtain-menu" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-                <a class="nav-bar-drop-down-menu-item" href="Max_Intro.html">Max Intro</a>
-                <a class="nav-bar-drop-down-menu-item" href="Chordophone.html">Chordophone</a>
-                <a class="nav-bar-drop-down-menu-item" href="DiatonicPads.html">DiatonicPads</a>
-                <a class="nav-bar-drop-down-menu-item" href="LiveClip.html">LiveClip</a>
+                <a class="nav-bar-drop-down-menu-item" href="ProjectIndex.html">Open-Source Projects</a>
+                <a class="nav-bar-drop-down-menu-item" href="BlogIndex.html">DIY Blog</a>
             </div>
         </div>
-        
         <div class="project">
             <div class="project-title">
                 <h1 class="display-4 text-center">LiveClip</h1>
             </div>
             <div class="project-description tutorial-text-size">
                 <div class="my-3">
-                    <img src="./static/images/LiveClip/liveclip.png" class="home-card-image img-fluid d-block mx-auto">
+                    <img src="./images/LiveClip/liveclip.png" class="home-card-image img-fluid d-block mx-auto">
                 </div>
                 <p>
                     This Max project is a Max for Live device. Max for Live is an add on for the Ableton Live music production environment.
@@ -78,7 +69,7 @@
                     target notes from a highlighted clip and will display them on the grid as lit buttons.
                 </p>
                 <div class="my-3">
-                    <img src="./static/images/LiveClip/notemode.png" class="home-card-image img-fluid d-block mx-auto">
+                    <img src="./images/LiveClip/notemode.png" class="home-card-image img-fluid d-block mx-auto">
                 </div>
                 <p>
                     The default mode is note mode. Buttons [0 0] - [15 0] display the playhead of the clip as a blinking light. Pressing one of these buttons
@@ -86,7 +77,7 @@
                     clip. The notes that it selects and edits can be set from the UI in the patch.
                 </p>
                 <div class="my-3">
-                    <img src="./static/images/LiveClip/velomode.png" class="home-card-image img-fluid d-block mx-auto">
+                    <img src="./images/LiveClip/velomode.png" class="home-card-image img-fluid d-block mx-auto">
                 </div>
                 <p>
                     Once in velo mode the blinking light will disappear, the selected column will be lit and the selected velocity will be brightly lit.
@@ -99,6 +90,8 @@
             </div>
         </div>
     </body>
-    <script src="resizeNavbar.js"></script>
-    <script src="navbarToggle.js"></script>
+    <footer>
+        <script src="./javascript/resizeNavbar.js"></script>
+        <script src="./javascript/navbarToggle.js"></script>
+    </footer>
 </html>

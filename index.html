@@ -1,15 +1,14 @@
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>SSC - Home</title>
+    
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./static/css/style.css">
-        <link rel="stylesheet" href="./static/css/curtain_menu.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/curtain_menu.css">
     </head>
     <body>
         <nav>
@@ -18,16 +17,10 @@
                     <a class="nav-bar-list-logo" href="/">SitStayCreate</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="Max_Intro.html">Max Intro</a>
+                    <a class="nav-bar-list-link" href="ProjectIndex.html">Open-Source projects</a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="Chordophone.html">Chordophone</a>
-                </li>
-                <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="DiatonicPads.html">DiatonicPads</a>
-                </li>
-                <li class="nav-bar-list-item">
-                    <a class="nav-bar-list-link" href="LiveClip.html">LiveClip</a>
+                    <a class="nav-bar-list-link" href="BlogIndex.html">DIY Blog</a>
                 </li>
             </ul>
             <ul class="nav-bar" id="button-container">
@@ -43,67 +36,25 @@
         <div id="curtain-menu" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-                <a class="nav-bar-drop-down-menu-item" href="Max_Intro.html">Max Intro</a>
-                <a class="nav-bar-drop-down-menu-item" href="Chordophone.html">Chordophone</a>
-                <a class="nav-bar-drop-down-menu-item" href="DiatonicPads.html">DiatonicPads</a>
-                <a class="nav-bar-drop-down-menu-item" href="LiveClip.html">LiveClip</a>
+                <a class="nav-bar-drop-down-menu-item" href="ProjectIndex.html">Open-Source Projects</a>
+                <a class="nav-bar-drop-down-menu-item" href="BlogIndex.html">DIY Blog</a>
             </div>
         </div>
-    
-        <div class="home">
-            <div class="project-title text-center">
-                <h1 class="display-4 text-center">Projects</h1>
+        <div class="project">
+            <div class="project-title">
+                <h1 class="display-4 text-center">SitStayCreate</h1>
             </div>
-            <div class="Home-Section-Container text-center"  name="Home-Section-MaxExternals" hidden>
-                    <h4>MaxExternals</h4>
-                <!-- TODO: Image -->
-                <p>
-                    A suite of Max/MSP externals (Max/MSP objects that extend the Max/MSP 
-                    programming language)
-                </p>
-            </div>
-            <div class="Home-Section-Container text-center" name="Home-Section-MaxIntro">
-                <h4>MaxIntro</h4>
-                <a href="Max_Intro.html">
-                    <img src="./static/images/Max/max_intro.png"
-                    class="home-card-image img-fluid d-block mx-auto"> 
-                </a>
-                <p>
-                    A brief intro on the Max/MSP programming environment
-                </p>
-            </div>
-            <div class="Home-Section-Container text-center" name="Home-Section-DiatonicPads">
-                <h4>DiatonicPads</h4>
-                <a href="DiatonicPads.html">
-                    <img src="./static/images/DiatonicPads/Diatonic-pads.png" 
-                    class="home-card-image img-fluid d-block mx-auto">
-                </a>
-                <p>
-                    A Max/MSP project to extend a 4x4 pad controller
-                </p>
-            </div>
-            <div class="Home-Section-Container text-center" name="Home-Section-Chordophone">
-                <h4>Chordophone</h4>
-                <a href="Chordophone.html">
-                    <img src="./static/images/Chordophone/chordophone.png" 
-                    class="home-card-image img-fluid d-block mx-auto">
-                </a>
-                <p>
-                    A Max/MSP project for the Monome Grid
-                </p>
-            </div>
-            <div class="Home-Section-Container text-center" name="Home-Section-LiveClip">
-                <h4>LiveClip</h4>
-                <a href="LiveClip.html">
-                    <img src="./static/images/LiveClip/liveclip.png"
-                    class="home-card-image img-fluid d-block mx-auto">
-                </a>
-                <p>
-                    A Max4Live project for the Monome Grid
-                </p>
-            </div>
+            <div class="project-description tutorial-text-size">
+            <p>SitStayCreate was created as a student project in 2017. It was a hypothetical business for
+                a Udacity course on Android programming offered through Google's GWG program.
+                In 2019, it became the name for a number of open-source projects focusing on electronic musical
+                instruments and controllers. In 2024, after 7 years of existence, it became SitStayCreate LLC.
+                We offer IT consulting services for electronic musicians and studios.
+            </p>
         </div>
     </body>
-    <script src="resizeNavbar.js"></script>
-    <script src="navbarToggle.js"></script>
+    <footer>
+        <script src="./javascript/resizeNavbar.js"></script>
+        <script src="./javascript/navbarToggle.js"></script>
+    </footer>
 </html>
